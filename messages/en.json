@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "title": "Phan Dinh Cu — Production Management · Manufacturing Operations · Digital Transformation",
+    "description": "Production management professional with hands-on manufacturing experience and practical expertise in MES and manufacturing digital transformation.",
+    "ogAlt": "Phan Dinh Cu professional profile — Production Management"
+  },
+  "nav": {
+    "capabilities": "Capabilities",
+    "experience": "Experience",
+    "projects": "Projects",
+    "technical": "Technical",
+    "contact": "Contact",
+    "cv": "CV",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "titleBlock": {
+    "owner": "Phan Dinh Cu",
+    "scale": "SCALE 1:1",
+    "revision": "REV 2026.08"
+  },
+  "common": {
+    "placeholder": "No data yet"
+  },
+  "hero": {
+    "sectionCode": "SEC 01",
+    "sectionName": "Positioning",
+    "lines": [
+      "Production Management",
+      "Manufacturing Operations",
+      "Digital Transformation"
+    ],
+    "positioning": "Production management professional with hands-on manufacturing experience and practical expertise in MES and manufacturing digital transformation.",
+    "cta": {
+      "experience": "View experience",
+      "projects": "Featured projects",
+      "cv": "Download CV",
+      "contact": "Contact"
+    },
+    "snapshotLabel": "Professional snapshot",
+    "snapshot": [
+      {
+        "value": "02+",
+        "label": "years Production Management"
+      },
+      {
+        "value": "~1,500",
+        "label": "smart lockers / month"
+      },
+      {
+        "value": "~10",
+        "label": "orders / month"
+      },
+      {
+        "value": "~250",
+        "label": "people in the plant · 3 workshops"
+      },
+      {
+        "value": "MES",
+        "label": "development & deployment"
+      },
+      {
+        "value": "VI–ZH",
+        "label": "Chinese–Vietnamese business communication"
+      }
+    ],
+    "zhCta": "中文简历",
+    "available": "Open to new opportunities"
+  },
+  "capabilities": {
+    "sectionCode": "SEC 02",
+    "sectionName": "Capabilities",
+    "title": "Core capabilities",
+    "lead": "Four capabilities I use every day to keep the plant running to plan.",
+    "items": [
+      {
+        "no": "01",
+        "name": "Production Management",
+        "desc": "Building and controlling order-based plans, monitoring progress in each workshop, working through supervisors to set assignments and resolve day-to-day issues.",
+        "tags": [
+          "Production planning",
+          "Production control",
+          "Progress monitoring",
+          "Order-based planning",
+          "Coordination through supervisors",
+          "Production problem solving"
+        ]
+      },
+      {
+        "no": "02",
+        "name": "Operational Improvement",
+        "desc": "Standardising the way work is done through SOPs and forms, tracing root causes instead of treating symptoms, improving information flow between departments.",
+        "tags": [
+          "SOP",
+          "Standardization",
+          "5S",
+          "Kaizen",
+          "ISO 9001",
+          "Root-cause analysis"
+        ]
+      },
+      {
+        "no": "03",
+        "name": "Digital Transformation",
+        "desc": "Moving plans, progress and stock onto MES so management sees real numbers in real time instead of waiting for hand-consolidated reports.",
+        "tags": [
+          "MES",
+          "Production digitalization",
+          "Production data",
+          "Real-time monitoring",
+          "Digital workflow",
+          "Management visibility"
+        ]
+      },
+      {
+        "no": "04",
+        "name": "Cross-functional Coordination",
+        "desc": "Acting as the link between Production, Warehouse, HR, Quality, IT and Management — including carrying work requirements across Vietnamese and Chinese.",
+        "tags": [
+          "Production ↔ Warehouse",
+          "HR ↔ Quality",
+          "IT ↔ Management",
+          "Chinese–Vietnamese communication",
+          "Follow-up & escalation"
+        ]
+      },
+      {
+        "no": "05",
+        "name": "Training & Team Development",
+        "desc": "Onboarding new operators and coaching mid-level supervisors on management method: how to build a plan, track progress, resolve issues and report. This is how I scale management capability instead of doing everything myself.",
+        "tags": [
+          "New operator training",
+          "Supervisor coaching",
+          "Management method",
+          "Work standardization",
+          "On-the-floor mentoring"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "sectionCode": "SEC 03",
+    "sectionName": "Experience",
+    "title": "Experience",
+    "company": "WEBOX VIETNAM",
+    "role": "Assistant to the Factory Manager — Production Management",
+    "meta": "Smart locker manufacturing and OEM machining of premium cabinet components for the domestic market · ~250 people · 3 workshops · Vietnamese–Chinese environment",
+    "flowLabel": "Production flow",
+    "flow": ["Metal", "Paint", "Assembly", "Shipping"],
+    "tracks": [
+      {
+        "name": "Production Management",
+        "years": "2+ years",
+        "bullets": [
+          "Building order-based production plans and controlling progress across metal → paint → assembly → shipping.",
+          "Tracking a flow of around 10 orders per month, roughly 1,500 smart lockers, alongside OEM orders for premium cabinet components on the domestic market.",
+          "Working with the supervisors of three workshops to set daily assignments; resolving issues and escalating when beyond my authority.",
+          "Designed the semi-finished goods warehouse system covering more than 1,100 codes — part of the plant’s 5,000+ material codes.",
+          "Built and operate the internal management systems (MES, warehouse, documents) that serve production management directly — from business analysis to deployment, without a separate IT team.",
+          "Following orders through to delivery and reporting production status to management.",
+          "Working directly with Warehouse, HR, Quality and IT to close cross-functional problems.",
+          "Training new operators and coaching workshop supervisors on management method."
+        ]
+      }
+    ],
+    "sinceLabel": "Period",
+    "scopeNote": "Working through the supervisors of the metal, paint and assembly workshops — no direct line management of operators."
+  },
+  "projects": {
+    "sectionCode": "SEC 04",
+    "sectionName": "Projects",
+    "title": "Featured projects",
+    "lead": "Systems in real use on the factory floor. Shown by management value; switch to Technical for deployment detail.",
+    "view": {
+      "business": "Management",
+      "technical": "Technical",
+      "label": "View"
+    },
+    "labels": {
+      "problem": "Problem",
+      "solution": "Solution",
+      "value": "Management value",
+      "scope": "Scope",
+      "tech": "Technology",
+      "caseStudy": "View detail",
+      "noImage": "No screenshot yet",
+      "confidential": "Data in the screenshots is masked in line with company confidentiality rules.",
+      "role": "Role"
+    },
+    "items": {
+      "mes": {
+        "title": "Manufacturing MES Platform",
+        "subtitle": "Internal production management platform",
+        "problem": "Plans, progress, stock and documents lived in scattered files. Locating an order meant waiting for a hand-consolidated report.",
+        "solution": "An MES platform on the internal network covering the whole flow from order intake to shipping, with permissions and audit logs. Within it I designed the semi-finished goods warehouse module covering 1,100+ codes.",
+        "value": "Management sees plan and progress for all three workshops on one screen; the semi-finished goods warehouse gives stock, location and history for 1,100+ codes instead of digging through Excel.",
+        "message": "Technology is used to solve manufacturing problems.",
+        "role": "Sole builder — business analysis, design, development, deployment and operation."
+      },
+      "digital": {
+        "title": "Production Digitalization",
+        "subtitle": "Production and attendance data digitalized",
+        "problem": "Output and attendance data were processed by hand in Excel, dependent on one person and prone to mismatches between departments.",
+        "solution": "A digital flow: Excel intake, processing against shift and exception settings, report export and a per-team analysis screen.",
+        "value": "Reconciliation no longer depends on one person working by hand; output by team and by worker is visible immediately.",
+        "message": "Production data has to be visible before it can be managed.",
+        "role": "Sole builder — from business rules to an application running on the LAN."
+      },
+      "itsys": {
+        "title": "Factory IT & Business Systems",
+        "subtitle": "Plant infrastructure and business systems",
+        "problem": "Internal systems need a stable server, network and incident routine; repetitive IT tasks were done by hand, differently every time.",
+        "solution": "Administering the server and internal network for all business systems; standardising common IT actions into a bilingual VN–CN toolkit.",
+        "value": "Shared systems stay up; the same incident is handled the same way and new staff can take it over.",
+        "message": "Stable infrastructure is what digitalization stands on.",
+        "role": "Sole administrator of the server, internal network and troubleshooting toolkit."
+      }
+    }
+  },
+  "technical": {
+    "sectionCode": "SEC 05",
+    "sectionName": "Technical",
+    "title": "Professional foundation",
+    "lead": "The systems, methods and tools I work with. Kept short on purpose.",
+    "groups": [
+      {
+        "name": "Quality system",
+        "items": "ISO 9001 — working inside the plant quality management system"
+      },
+      {
+        "name": "Improvement methods",
+        "items": "5S · Kaizen · SOP · Process standardisation · Root-cause analysis"
+      },
+      {
+        "name": "Data",
+        "items": "SQL · Databases · Production data · Reporting"
+      },
+      {
+        "name": "Server & Network",
+        "items": "Windows Server · LAN / IP · Nginx · Server deployment"
+      },
+      {
+        "name": "Business systems",
+        "items": "MES · Internal web systems · Permissions · System log"
+      }
+    ],
+    "education": {
+      "school": "Ho Chi Minh City University of Technology and Education",
+      "major": "Industrial Electronics Engineering"
+    },
+    "languages": "Vietnamese — Native · Chinese — HSK 4+, meetings, documents and two-way interpreting of work requirements · English — Work / technical",
+    "educationLabel": "Education",
+    "languagesLabel": "Languages",
+    "refLabel": "References",
+    "ref": "Available on request",
+    "locLabel": "Work location",
+    "location": "Open to relocation — no location preference"
+  },
+  "contact": {
+    "sectionCode": "SEC 06",
+    "sectionName": "Contact",
+    "title": "Ready for the next production management role.",
+    "lead": "If your plant needs a manager who understands both the floor and the systems behind it, get in touch directly.",
+    "targetLabel": "Target roles",
+    "targets": [
+      "Production Supervisor",
+      "Deputy Production Manager",
+      "Production Manager",
+      "Operations Manager"
+    ],
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "cv": "Download CV",
+      "cvSoon": "CV — coming soon",
+      "zalo": "Zalo"
+    },
+    "targetNote": "or equivalent"
+  },
+  "caseStudy": {
+    "steps": [
+      "Context",
+      "Operational problem",
+      "Approach",
+      "Solution",
+      "Technology",
+      "Management value"
+    ],
+    "pending": "Nothing written here yet — to be added",
+    "pendingResult": "No measured figures yet — to be added",
+    "back": "Back to home",
+    "allProjects": "All projects",
+    "screenshots": "Screenshots",
+    "core": "System scope",
+    "next": "Next project",
+    "value": "Management value",
+    "stepNames": [
+      "Context",
+      "Operational problem",
+      "Approach",
+      "Solution",
+      "Technology",
+      "Management value"
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "desc": "This address does not exist or has changed.",
+    "back": "Back to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "desc": "The page failed to load. Please try again.",
+    "retry": "Try again"
+  }
+}

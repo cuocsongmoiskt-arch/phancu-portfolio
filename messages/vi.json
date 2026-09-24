@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "title": "Phan Đình Cự — Quản lý Sản xuất · Vận hành Nhà máy · MES",
+    "description": "Quản lý sản xuất với kinh nghiệm thực tế tại nhà máy, chuyên sâu về MES và chuyển đổi số sản xuất.",
+    "ogAlt": "Hồ sơ nghề nghiệp Phan Đình Cự — Quản lý Sản xuất"
+  },
+  "nav": {
+    "capabilities": "Năng lực",
+    "experience": "Kinh nghiệm",
+    "projects": "Dự án",
+    "technical": "Kỹ thuật",
+    "contact": "Liên hệ",
+    "cv": "CV",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "language": "Ngôn ngữ"
+  },
+  "titleBlock": {
+    "owner": "Phan Đình Cự",
+    "scale": "SCALE 1:1",
+    "revision": "REV 2026.08"
+  },
+  "common": {
+    "placeholder": "Chưa có dữ liệu"
+  },
+  "hero": {
+    "sectionCode": "SEC 01",
+    "sectionName": "Định vị",
+    "lines": [
+      "Production Management",
+      "Manufacturing Operations",
+      "Digital Transformation"
+    ],
+    "positioning": "Quản lý sản xuất với kinh nghiệm thực tế trong nhà máy, kết hợp năng lực triển khai MES và chuyển đổi số sản xuất.",
+    "cta": {
+      "experience": "Xem kinh nghiệm",
+      "projects": "Dự án tiêu biểu",
+      "cv": "Tải CV",
+      "contact": "Liên hệ"
+    },
+    "snapshotLabel": "Tổng quan nghề nghiệp",
+    "snapshot": [
+      {
+        "value": "02+",
+        "label": "năm Quản lý Sản xuất"
+      },
+      {
+        "value": "~1.500",
+        "label": "tủ thông minh / tháng"
+      },
+      {
+        "value": "~10",
+        "label": "đơn hàng / tháng"
+      },
+      {
+        "value": "~250",
+        "label": "nhân sự toàn nhà máy · 3 xưởng"
+      },
+      {
+        "value": "MES",
+        "label": "tự phát triển và triển khai"
+      },
+      {
+        "value": "VI–ZH",
+        "label": "giao tiếp Việt – Trung trong sản xuất"
+      }
+    ],
+    "zhCta": "中文简历",
+    "available": "Sẵn sàng trao đổi cơ hội mới"
+  },
+  "capabilities": {
+    "sectionCode": "SEC 02",
+    "sectionName": "Năng lực",
+    "title": "Năng lực cốt lõi",
+    "lead": "Bốn nhóm năng lực tôi sử dụng hằng ngày để giữ nhà máy chạy đúng kế hoạch.",
+    "items": [
+      {
+        "no": "01",
+        "name": "Quản lý Sản xuất",
+        "desc": "Lập và kiểm soát kế hoạch theo đơn hàng, theo dõi tiến độ từng xưởng, làm việc qua cán bộ quản lý để bố trí công việc và xử lý vướng mắc phát sinh trong ngày.",
+        "tags": [
+          "Kế hoạch sản xuất",
+          "Kiểm soát sản xuất",
+          "Theo dõi tiến độ",
+          "Kế hoạch theo đơn hàng",
+          "Phối hợp cán bộ xưởng",
+          "Xử lý sự cố sản xuất"
+        ]
+      },
+      {
+        "no": "02",
+        "name": "Cải tiến Vận hành",
+        "desc": "Chuẩn hoá cách làm bằng SOP và biểu mẫu, truy nguyên nhân gốc thay vì xử lý hiện tượng, cải thiện luồng thông tin giữa các bộ phận.",
+        "tags": [
+          "SOP",
+          "Chuẩn hoá",
+          "5S",
+          "Kaizen",
+          "ISO 9001",
+          "Truy nguyên nhân gốc"
+        ]
+      },
+      {
+        "no": "03",
+        "name": "Chuyển đổi số Sản xuất",
+        "desc": "Đưa kế hoạch, tiến độ và tồn kho lên hệ thống MES để ban giám đốc nhìn được số liệu thật theo thời gian thực thay vì chờ báo cáo tổng hợp tay.",
+        "tags": [
+          "MES",
+          "Số hoá sản xuất",
+          "Dữ liệu sản xuất",
+          "Giám sát thời gian thực",
+          "Quy trình số",
+          "Khả năng kiểm soát"
+        ]
+      },
+      {
+        "no": "04",
+        "name": "Phối hợp Liên bộ phận",
+        "desc": "Làm cầu nối giữa Sản xuất – Kho – Nhân sự – Chất lượng – IT – Ban Giám đốc, bao gồm cả việc chuyển tải yêu cầu công việc giữa hai ngôn ngữ Việt và Trung.",
+        "tags": [
+          "Sản xuất ↔ Kho",
+          "Nhân sự ↔ Chất lượng",
+          "IT ↔ Ban Giám đốc",
+          "Giao tiếp Việt – Trung",
+          "Theo dõi và báo cáo vướng mắc"
+        ]
+      },
+      {
+        "no": "05",
+        "name": "Đào tạo & Phát triển đội ngũ",
+        "desc": "Đào tạo công nhân mới vào việc và huấn luyện phương pháp quản lý cho cán bộ cấp trung: cách lập kế hoạch, theo dõi tiến độ, xử lý vướng mắc và báo cáo. Đây là cách tôi nhân rộng năng lực quản lý thay vì tự làm mọi việc.",
+        "tags": [
+          "Đào tạo công nhân mới",
+          "Huấn luyện cán bộ cấp trung",
+          "Phương pháp quản lý",
+          "Chuẩn hoá cách làm việc",
+          "Kèm cặp tại chỗ"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "sectionCode": "SEC 03",
+    "sectionName": "Kinh nghiệm",
+    "title": "Kinh nghiệm",
+    "company": "WEBOX VIỆT NAM",
+    "role": "Trợ lý Giám đốc Nhà máy — phụ trách Quản lý Sản xuất",
+    "meta": "Sản xuất tủ khoá thông minh và gia công linh kiện tủ cao cấp cho thị trường trong nước · ~250 nhân sự · 3 xưởng · môi trường Việt – Trung",
+    "flowLabel": "Luồng sản xuất",
+    "flow": ["Kim loại", "Sơn", "Lắp ráp", "Xuất hàng"],
+    "tracks": [
+      {
+        "name": "Quản lý Sản xuất",
+        "years": "2+ năm",
+        "bullets": [
+          "Lập kế hoạch sản xuất theo đơn hàng và kiểm soát tiến độ qua 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng.",
+          "Theo dõi luồng khoảng 10 đơn hàng mỗi tháng, tương đương ~1.500 tủ thông minh, song song với các đơn gia công linh kiện tủ cao cấp cho thị trường trong nước.",
+          "Làm việc cùng cán bộ quản lý của ba xưởng để bố trí công việc hằng ngày; xử lý vướng mắc và báo lên cấp trên khi vượt thẩm quyền.",
+          "Thiết kế hệ thống quản lý kho bán thành phẩm với hơn 1.100 mã — một phần trong tổng số hơn 5.000 mã vật tư của nhà máy.",
+          "Tự xây dựng và vận hành hệ thống quản lý nội bộ (MES, kho, tài liệu) phục vụ trực tiếp công tác quản lý sản xuất — từ khảo sát nghiệp vụ đến triển khai, không qua đội IT riêng.",
+          "Theo dõi đơn hàng đến khi giao, lập báo cáo sản xuất cho Ban Giám đốc.",
+          "Phối hợp trực tiếp với Kho, Nhân sự, Chất lượng và IT để giải quyết vấn đề liên bộ phận.",
+          "Đào tạo công nhân mới vào và huấn luyện phương pháp quản lý cho cán bộ cấp trung của các xưởng."
+        ]
+      }
+    ],
+    "sinceLabel": "Thời gian",
+    "scopeNote": "Làm việc qua cán bộ quản lý của 3 xưởng Kim loại · Sơn · Lắp ráp — không trực tiếp quản lý công nhân."
+  },
+  "projects": {
+    "sectionCode": "SEC 04",
+    "sectionName": "Dự án",
+    "title": "Dự án tiêu biểu",
+    "lead": "Các hệ thống đang được sử dụng thật tại nhà máy. Trình bày theo giá trị quản lý; bật Kỹ thuật nếu cần chi tiết triển khai.",
+    "view": {
+      "business": "Quản lý",
+      "technical": "Kỹ thuật",
+      "label": "Cách trình bày"
+    },
+    "labels": {
+      "problem": "Vấn đề",
+      "solution": "Giải pháp",
+      "value": "Giá trị quản lý",
+      "scope": "Phạm vi",
+      "tech": "Công nghệ",
+      "caseStudy": "Xem chi tiết",
+      "noImage": "Chưa có ảnh",
+      "confidential": "Dữ liệu trong ảnh đã được che theo quy định bảo mật của công ty.",
+      "role": "Vai trò"
+    },
+    "items": {
+      "mes": {
+        "title": "Manufacturing MES Platform",
+        "subtitle": "Nền tảng quản lý sản xuất nội bộ",
+        "problem": "Kế hoạch, tiến độ, tồn kho và tài liệu nằm rải rác ở nhiều file. Ban Giám đốc muốn biết một đơn hàng đang ở đâu thì phải chờ tổng hợp tay.",
+        "solution": "Xây dựng nền tảng MES chạy trong mạng nội bộ, quản lý toàn bộ luồng từ nhận đơn tới xuất hàng, kèm phân quyền và nhật ký thao tác. Trong đó tôi tự thiết kế module kho bán thành phẩm với hơn 1.100 mã.",
+        "value": "Ban Giám đốc xem được kế hoạch và tiến độ cả ba xưởng trên một màn hình; riêng kho bán thành phẩm tra được tồn, vị trí và lịch sử thao tác của hơn 1.100 mã thay vì dò bằng Excel.",
+        "message": "Công nghệ dùng để giải quyết vấn đề sản xuất.",
+        "role": "Tự thực hiện toàn bộ — khảo sát nghiệp vụ, thiết kế, lập trình, triển khai và vận hành."
+      },
+      "digital": {
+        "title": "Production Digitalization",
+        "subtitle": "Số hoá dữ liệu sản xuất và chấm công",
+        "problem": "Số liệu sản lượng và chấm công xử lý bằng Excel thủ công, phụ thuộc vào một người và dễ sai lệch giữa các bộ phận.",
+        "solution": "Xây dựng luồng số hoá: nhận file Excel, xử lý theo cấu hình ca và ngoại lệ, xuất báo cáo và đẩy lên màn hình phân tích cho từng tổ.",
+        "value": "Việc đối chiếu và tổng hợp không còn phụ thuộc thao tác tay của một người; số liệu sản lượng theo tổ và theo công nhân xem được ngay.",
+        "message": "Dữ liệu sản xuất phải nhìn thấy được thì mới quản lý được.",
+        "role": "Tự thực hiện toàn bộ — từ quy tắc nghiệp vụ tới ứng dụng chạy trong LAN."
+      },
+      "itsys": {
+        "title": "Factory IT & Business Systems",
+        "subtitle": "Hạ tầng và hệ thống nghiệp vụ nhà máy",
+        "problem": "Hệ thống nội bộ cần máy chủ, mạng và quy trình xử lý sự cố ổn định; các tác vụ IT lặp lại mỗi ngày làm thủ công, mỗi lần một kiểu.",
+        "solution": "Quản trị máy chủ và mạng nội bộ cho toàn bộ hệ thống nghiệp vụ; chuẩn hoá các thao tác IT thường gặp thành bộ công cụ chạy nhanh, song ngữ Việt – Trung.",
+        "value": "Hệ thống dùng chung chạy ổn định; cùng một sự cố được xử lý cùng một cách, người mới tiếp nhận được ngay.",
+        "message": "Hạ tầng ổn định là điều kiện để số hoá đứng vững.",
+        "role": "Tự quản trị máy chủ, mạng nội bộ và bộ công cụ xử lý sự cố."
+      }
+    }
+  },
+  "technical": {
+    "sectionCode": "SEC 05",
+    "sectionName": "Kỹ thuật",
+    "title": "Nền tảng chuyên môn",
+    "lead": "Hệ thống, phương pháp và công cụ tôi làm việc cùng. Trình bày ngắn gọn.",
+    "groups": [
+      {
+        "name": "Hệ thống chất lượng",
+        "items": "ISO 9001 — làm việc trong hệ thống quản lý chất lượng của nhà máy"
+      },
+      {
+        "name": "Phương pháp cải tiến",
+        "items": "5S · Kaizen · SOP · Chuẩn hoá quy trình · Truy nguyên nhân gốc"
+      },
+      {
+        "name": "Dữ liệu",
+        "items": "SQL · Cơ sở dữ liệu · Dữ liệu sản xuất · Báo cáo"
+      },
+      {
+        "name": "Máy chủ & Mạng",
+        "items": "Windows Server · LAN / IP · Nginx · Triển khai máy chủ"
+      },
+      {
+        "name": "Hệ thống nghiệp vụ",
+        "items": "MES · Web nội bộ · Phân quyền · Nhật ký hệ thống"
+      }
+    ],
+    "education": {
+      "school": "Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh",
+      "major": "Kỹ thuật Điện tử Công nghiệp"
+    },
+    "languages": "Tiếng Việt — Bản ngữ · 中文 — HSK 4+, họp và xử lý tài liệu với quản lý Trung Quốc, chuyển tải yêu cầu công việc hai chiều · English — Công việc / kỹ thuật",
+    "educationLabel": "Học vấn",
+    "languagesLabel": "Ngôn ngữ",
+    "refLabel": "Tham chiếu",
+    "ref": "Cung cấp khi được yêu cầu",
+    "locLabel": "Khu vực làm việc",
+    "location": "Sẵn sàng làm việc tại bất kỳ khu vực nào"
+  },
+  "contact": {
+    "sectionCode": "SEC 06",
+    "sectionName": "Liên hệ",
+    "title": "Sẵn sàng cho vị trí quản lý sản xuất tiếp theo.",
+    "lead": "Nếu nhà máy của anh/chị cần một người quản lý hiểu cả xưởng lẫn hệ thống, hãy liên hệ trực tiếp.",
+    "targetLabel": "Vị trí hướng tới",
+    "targets": [
+      "Giám sát Sản xuất",
+      "Phó Quản lý Sản xuất",
+      "Quản lý Sản xuất",
+      "Quản lý Vận hành"
+    ],
+    "labels": {
+      "email": "Email",
+      "phone": "Điện thoại",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "cv": "Tải CV",
+      "cvSoon": "CV — sẽ bổ sung",
+      "zalo": "Zalo"
+    },
+    "targetNote": "hoặc vị trí tương đương"
+  },
+  "caseStudy": {
+    "steps": [
+      "Bối cảnh",
+      "Vấn đề vận hành",
+      "Cách tiếp cận",
+      "Giải pháp",
+      "Công nghệ",
+      "Giá trị quản lý"
+    ],
+    "pending": "Phần này chưa có nội dung — sẽ bổ sung",
+    "pendingResult": "Chưa có số liệu đo được — sẽ bổ sung khi có",
+    "back": "Về trang chủ",
+    "allProjects": "Tất cả dự án",
+    "screenshots": "Ảnh thực tế",
+    "core": "Phạm vi hệ thống",
+    "next": "Dự án tiếp theo",
+    "value": "Giá trị quản lý",
+    "stepNames": [
+      "Bối cảnh",
+      "Vấn đề vận hành",
+      "Cách tiếp cận",
+      "Giải pháp",
+      "Công nghệ",
+      "Giá trị quản lý"
+    ]
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "desc": "Đường dẫn này không tồn tại hoặc đã được đổi.",
+    "back": "Về trang chủ"
+  },
+  "error": {
+    "title": "Có lỗi xảy ra",
+    "desc": "Trang gặp sự cố khi tải. Thử lại giúp tôi nhé.",
+    "retry": "Thử lại"
+  }
+}
