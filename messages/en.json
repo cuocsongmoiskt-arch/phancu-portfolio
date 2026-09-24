@@ -155,7 +155,7 @@
         "bullets": [
           "Building order-based production plans and controlling progress across metal → paint → assembly → shipping.",
           "Tracking a flow of around 10 orders per month, roughly 1,500 smart lockers, alongside OEM orders for premium cabinet components on the domestic market.",
-          "Working with the supervisors of three workshops to set daily assignments; resolving issues and escalating when beyond my authority.",
+          "Reporting directly to the Plant Director and working through the supervisors of three workshops to set daily assignments; resolving issues and escalating when beyond my authority.",
           "Designed the semi-finished goods warehouse system covering more than 1,100 codes — part of the plant’s 5,000+ material codes.",
           "Built and operate the internal management systems (MES, warehouse, documents) that serve production management directly — from business analysis to deployment, without a separate IT team.",
           "Following orders through to delivery and reporting production status to management.",
@@ -194,7 +194,7 @@
         "subtitle": "Internal production management platform",
         "problem": "Plans, progress, stock and documents lived in scattered files. Locating an order meant waiting for a hand-consolidated report.",
         "solution": "An MES platform on the internal network covering the whole flow from order intake to shipping, with permissions and audit logs. Within it I designed the semi-finished goods warehouse module covering 1,100+ codes.",
-        "value": "Management sees plan and progress for all three workshops on one screen; the semi-finished goods warehouse gives stock, location and history for 1,100+ codes instead of digging through Excel.",
+        "value": "Management sees plan and progress for all three workshops on one screen (instead of waiting a day for reports); the semi-finished goods warehouse gives real-time stock and location instead of digging through Excel.",
         "message": "Technology is used to solve manufacturing problems.",
         "role": "Sole builder — business analysis, design, development, deployment and operation."
       },
@@ -237,12 +237,8 @@
         "items": "SQL · Databases · Production data · Reporting"
       },
       {
-        "name": "Server & Network",
-        "items": "Windows Server · LAN / IP · Nginx · Server deployment"
-      },
-      {
-        "name": "Business systems",
-        "items": "MES · Internal web systems · Permissions · System log"
+        "name": "Manufacturing Tech",
+        "items": "MES · Internal LAN administration · Web application deployment"
       }
     ],
     "education": {

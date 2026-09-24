@@ -155,7 +155,7 @@
         "bullets": [
           "Lập kế hoạch sản xuất theo đơn hàng và kiểm soát tiến độ qua 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng.",
           "Theo dõi luồng khoảng 10 đơn hàng mỗi tháng, tương đương ~1.500 tủ thông minh, song song với các đơn gia công linh kiện tủ cao cấp cho thị trường trong nước.",
-          "Làm việc cùng cán bộ quản lý của ba xưởng để bố trí công việc hằng ngày; xử lý vướng mắc và báo lên cấp trên khi vượt thẩm quyền.",
+          "Báo cáo trực tiếp cho Giám đốc Nhà máy (Plant Director) và làm việc cùng cán bộ quản lý của ba xưởng để bố trí công việc; xử lý vướng mắc và báo cáo khi vượt thẩm quyền.",
           "Thiết kế hệ thống quản lý kho bán thành phẩm với hơn 1.100 mã — một phần trong tổng số hơn 5.000 mã vật tư của nhà máy.",
           "Tự xây dựng và vận hành hệ thống quản lý nội bộ (MES, kho, tài liệu) phục vụ trực tiếp công tác quản lý sản xuất — từ khảo sát nghiệp vụ đến triển khai, không qua đội IT riêng.",
           "Theo dõi đơn hàng đến khi giao, lập báo cáo sản xuất cho Ban Giám đốc.",
@@ -194,7 +194,7 @@
         "subtitle": "Nền tảng quản lý sản xuất nội bộ",
         "problem": "Kế hoạch, tiến độ, tồn kho và tài liệu nằm rải rác ở nhiều file. Ban Giám đốc muốn biết một đơn hàng đang ở đâu thì phải chờ tổng hợp tay.",
         "solution": "Xây dựng nền tảng MES chạy trong mạng nội bộ, quản lý toàn bộ luồng từ nhận đơn tới xuất hàng, kèm phân quyền và nhật ký thao tác. Trong đó tôi tự thiết kế module kho bán thành phẩm với hơn 1.100 mã.",
-        "value": "Ban Giám đốc xem được kế hoạch và tiến độ cả ba xưởng trên một màn hình; riêng kho bán thành phẩm tra được tồn, vị trí và lịch sử thao tác của hơn 1.100 mã thay vì dò bằng Excel.",
+        "value": "Ban Giám đốc xem được kế hoạch và tiến độ cả ba xưởng trên một màn hình (thay vì chờ báo cáo 1 ngày); kho bán thành phẩm tra được tồn, vị trí Real-time thay vì dò Excel.",
         "message": "Công nghệ dùng để giải quyết vấn đề sản xuất.",
         "role": "Tự thực hiện toàn bộ — khảo sát nghiệp vụ, thiết kế, lập trình, triển khai và vận hành."
       },
@@ -237,12 +237,8 @@
         "items": "SQL · Cơ sở dữ liệu · Dữ liệu sản xuất · Báo cáo"
       },
       {
-        "name": "Máy chủ & Mạng",
-        "items": "Windows Server · LAN / IP · Nginx · Triển khai máy chủ"
-      },
-      {
-        "name": "Hệ thống nghiệp vụ",
-        "items": "MES · Web nội bộ · Phân quyền · Nhật ký hệ thống"
+        "name": "Công nghệ & Số hoá",
+        "items": "MES · Quản trị hạ tầng LAN nội bộ · Triển khai hệ thống Web ứng dụng"
       }
     ],
     "education": {

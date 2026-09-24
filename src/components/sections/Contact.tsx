@@ -102,7 +102,7 @@ export default function Contact() {
           ))}
         </ul>
 
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col items-start gap-10 md:flex-row md:items-center md:justify-between">
           {profile.cvUrl ? (
             <a
               href={profile.cvUrl}
@@ -115,6 +115,11 @@ export default function Contact() {
               {labels.cvSoon}
             </span>
           )}
+
+          <div className="label-mono flex items-center gap-3 text-white/30">
+            <span className="h-px w-8 bg-white/15" aria-hidden />
+            Handcrafted by {profile.name} with Next.js
+          </div>
         </div>
       </div>
     </section>

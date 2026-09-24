@@ -7,7 +7,7 @@ export const profile = {
   // Để trống = UI tự ẩn hoặc hiện trạng thái chưa có, không tự bịa
   email: "Phancu.edu@gmail.com",
   phone: "0888523894",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/phandinhcu",
   github: "",
   cvUrl: "/cv/PhanCu_CV.pdf", // CV 3 ngôn ngữ VI / 中文 / EN
   zalo: "0888523894", // Zalo dùng chung số điện thoại
