@@ -89,8 +89,15 @@ describe("cv", () => {
   it("mỗi ngôn ngữ có file CV riêng trong public/cv", () => {
     const pub = path.resolve(__dirname, "../../../public");
     expect(Object.keys(cvByLocale).sort()).toEqual(Object.keys(locales).sort());
-    const merged = "/cv/PhanDinhCu_CV_ProductionSupervisor_VI-ZH-EN.pdf";
-    for (const url of [...Object.values(cvByLocale), profile.cvUrl, merged]) {
+    const merged = [
+      "/cv/PhanDinhCu_CV_ProductionSupervisor_VI-ZH-EN.pdf",
+      "/cv/PhanDinhCu_CV_ProductionSupervisor_ZH-VI.pdf",
+    ];
+    for (const url of [
+      ...Object.values(cvByLocale),
+      profile.cvUrl,
+      ...merged,
+    ]) {
       expect(existsSync(path.join(pub, url)), url).toBe(true);
     }
   });

@@ -14,6 +14,7 @@ Chạy:  python3 tools/build_cv.py
 Ra:    public/cv/PhanDinhCu_CV_ProductionSupervisor_{VI,ZH,EN}.pdf
        public/cv/PhanCu_CV.pdf = bản tiếng Việt (giữ đường dẫn cũ cho các link đã gửi đi)
        public/cv/PhanDinhCu_CV_ProductionSupervisor_VI-ZH-EN.pdf = 3 bản gộp một file
+       public/cv/PhanDinhCu_CV_ProductionSupervisor_ZH-VI.pdf = song ngữ Trung – Việt
 """
 import os
 import shutil
@@ -296,32 +297,38 @@ def build(lang, photo_path):
     return path
 
 
-# Bản gộp 3 ngôn ngữ — tên chuẩn: Họ tên · CV · vị trí · ngôn ngữ, không dấu, không khoảng trắng
-MERGED = 'PhanDinhCu_CV_ProductionSupervisor_VI-ZH-EN.pdf'
+# Bản gộp — tên chuẩn: Họ tên · CV · vị trí · ngôn ngữ (theo thứ tự trang), không dấu, không khoảng trắng
+MERGED = {
+    'PhanDinhCu_CV_ProductionSupervisor_VI-ZH-EN.pdf': ('vi', 'zh', 'en'),
+    # Song ngữ cho nhà máy vốn Trung Quốc: trang tiếng Trung đứng trước
+    'PhanDinhCu_CV_ProductionSupervisor_ZH-VI.pdf': ('zh', 'vi'),
+}
 BOOKMARKS = {'vi': 'Tiếng Việt', 'zh': '中文', 'en': 'English'}
+LABELS = {'vi': 'VI', 'zh': '中文', 'en': 'EN'}
 
 
-def merge(paths):
-    """Gộp 3 bản thành một file 3 trang, có mục lục (bookmark) theo ngôn ngữ."""
+def merge(paths, name, langs):
+    """Gộp các bản một ngôn ngữ thành một file, có mục lục (bookmark) theo ngôn ngữ."""
     from pypdf import PdfReader, PdfWriter
     w = PdfWriter()
-    for lang in ('vi', 'zh', 'en'):
+    for lang in langs:
         page_no = len(w.pages)
         w.append(PdfReader(paths[lang]))
         w.add_outline_item(BOOKMARKS[lang], page_no)
-    w.add_metadata({'/Title': 'CV — Phan Đình Cự — Production Supervisor (VI / 中文 / EN)',
+    w.add_metadata({'/Title': 'CV — Phan Đình Cự — Production Supervisor (%s)'
+                              % ' / '.join(LABELS[l] for l in langs),
                     '/Author': 'Phan Dinh Cu', '/Subject': 'Curriculum Vitae'})
     w.page_mode = '/UseOutlines'
-    out = os.path.join(CV_DIR, MERGED)
-    with open(out, 'wb') as f:
+    with open(os.path.join(CV_DIR, name), 'wb') as f:
         w.write(f)
-    print('đã tạo public/cv/%s (3 trang: VI · 中文 · EN)' % MERGED)
+    print('đã tạo public/cv/%s (%d trang: %s)' % (name, len(langs), ' · '.join(LABELS[l] for l in langs)))
 
 
 if __name__ == '__main__':
     photo = rounded_photo()
     paths = {lang: build(lang, photo) for lang in ('vi', 'zh', 'en')}
-    merge(paths)
+    for name, langs in MERGED.items():
+        merge(paths, name, langs)
     # Giữ đường dẫn cũ /cv/PhanCu_CV.pdf (đã gửi trong các hồ sơ trước) — trỏ tới bản tiếng Việt
     shutil.copyfile(paths['vi'], os.path.join(CV_DIR, 'PhanCu_CV.pdf'))
     print('đã cập nhật public/cv/PhanCu_CV.pdf = bản tiếng Việt')
