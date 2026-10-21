@@ -16,7 +16,7 @@ CONTACT = {
 
 DATA = {
     "vi": {
-        "file": "PhanCu_CV_VI.pdf",
+        "file": "PhanDinhCu_CV_ProductionSupervisor_VI.pdf",
         "name": "PHAN ĐÌNH CỰ",
         "title": "Giám sát Sản xuất · Phó Quản lý Sản xuất",
         "location": "Làm việc mọi khu vực",
@@ -79,7 +79,7 @@ DATA = {
     },
 
     "zh": {
-        "file": "PhanCu_CV_ZH.pdf",
+        "file": "PhanDinhCu_CV_ProductionSupervisor_ZH.pdf",
         "name": "潘廷巨  PHAN DINH CU",
         "title": "生产主管 · 生产副经理",
         "location": "工作地点不限",
@@ -140,7 +140,7 @@ DATA = {
     },
 
     "en": {
-        "file": "PhanCu_CV_EN.pdf",
+        "file": "PhanDinhCu_CV_ProductionSupervisor_EN.pdf",
         "name": "PHAN DINH CU",
         "title": "Production Supervisor · Deputy Production Manager",
         "location": "Open to relocation",

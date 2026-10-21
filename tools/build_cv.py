@@ -11,8 +11,9 @@ Ràng buộc ATS (đã thử bằng pdftotext):
 - Dải chỉ số là MỘT dòng chữ liền: chia thành nhiều ô thì số và nhãn bị đảo thứ tự.
 
 Chạy:  python3 tools/build_cv.py
-Ra:    public/cv/PhanCu_CV_VI.pdf, PhanCu_CV_ZH.pdf, PhanCu_CV_EN.pdf
+Ra:    public/cv/PhanDinhCu_CV_ProductionSupervisor_{VI,ZH,EN}.pdf
        public/cv/PhanCu_CV.pdf = bản tiếng Việt (giữ đường dẫn cũ cho các link đã gửi đi)
+       public/cv/PhanDinhCu_CV_ProductionSupervisor_VI-ZH-EN.pdf = 3 bản gộp một file
 """
 import os
 import shutil
@@ -295,9 +296,32 @@ def build(lang, photo_path):
     return path
 
 
+# Bản gộp 3 ngôn ngữ — tên chuẩn: Họ tên · CV · vị trí · ngôn ngữ, không dấu, không khoảng trắng
+MERGED = 'PhanDinhCu_CV_ProductionSupervisor_VI-ZH-EN.pdf'
+BOOKMARKS = {'vi': 'Tiếng Việt', 'zh': '中文', 'en': 'English'}
+
+
+def merge(paths):
+    """Gộp 3 bản thành một file 3 trang, có mục lục (bookmark) theo ngôn ngữ."""
+    from pypdf import PdfReader, PdfWriter
+    w = PdfWriter()
+    for lang in ('vi', 'zh', 'en'):
+        page_no = len(w.pages)
+        w.append(PdfReader(paths[lang]))
+        w.add_outline_item(BOOKMARKS[lang], page_no)
+    w.add_metadata({'/Title': 'CV — Phan Đình Cự — Production Supervisor (VI / 中文 / EN)',
+                    '/Author': 'Phan Dinh Cu', '/Subject': 'Curriculum Vitae'})
+    w.page_mode = '/UseOutlines'
+    out = os.path.join(CV_DIR, MERGED)
+    with open(out, 'wb') as f:
+        w.write(f)
+    print('đã tạo public/cv/%s (3 trang: VI · 中文 · EN)' % MERGED)
+
+
 if __name__ == '__main__':
     photo = rounded_photo()
     paths = {lang: build(lang, photo) for lang in ('vi', 'zh', 'en')}
+    merge(paths)
     # Giữ đường dẫn cũ /cv/PhanCu_CV.pdf (đã gửi trong các hồ sơ trước) — trỏ tới bản tiếng Việt
     shutil.copyfile(paths['vi'], os.path.join(CV_DIR, 'PhanCu_CV.pdf'))
     print('đã cập nhật public/cv/PhanCu_CV.pdf = bản tiếng Việt')

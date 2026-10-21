@@ -20,9 +20,9 @@ export const profile = {
 // không phải phiên âm máy dịch. vi/en giữ cùng nội dung (có/không dấu là khác biệt duy nhất).
 // CV đúng ngôn ngữ đang xem — mỗi bản 1 trang, tạo bằng tools/build_cv.py
 export const cvByLocale = {
-  vi: "/cv/PhanCu_CV_VI.pdf",
-  en: "/cv/PhanCu_CV_EN.pdf",
-  zh: "/cv/PhanCu_CV_ZH.pdf",
+  vi: "/cv/PhanDinhCu_CV_ProductionSupervisor_VI.pdf",
+  en: "/cv/PhanDinhCu_CV_ProductionSupervisor_EN.pdf",
+  zh: "/cv/PhanDinhCu_CV_ProductionSupervisor_ZH.pdf",
 } as const;
 
 export const nameByLocale = {
