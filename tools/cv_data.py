@@ -36,7 +36,7 @@ DATA = {
                     ("Kế hoạch & tiến độ", [
                         "Phụ trách kế hoạch sản xuất theo đơn hàng và tiến độ 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng: "
                         "~10 đơn hàng, ~1.500 tủ thông minh mỗi tháng, cùng các đơn gia công linh kiện.",
-                        "Phân bổ công việc hằng ngày cho 3 xưởng (~180 công nhân) qua cán bộ quản lý xưởng; xử lý vướng mắc tại chỗ, báo cáo Giám đốc Nhà máy khi vượt thẩm quyền.",
+                        "Phân bổ công việc hằng ngày cho 3 xưởng (~180 công nhân) qua 22 cán bộ quản lý — chủ quản bộ phận, tổ trưởng, nhóm trưởng; xử lý vướng mắc tại chỗ, báo cáo Giám đốc Nhà máy khi vượt thẩm quyền.",
                         "Bám đơn hàng tới khi giao; lập báo cáo sản xuất cho Giám đốc Nhà máy và Ban Giám đốc.",
                     ]),
                     ("Quy trình & con người", [
@@ -96,7 +96,7 @@ DATA = {
                 "groups": [
                     ("计划与进度", [
                         "负责按订单编制生产计划，管控钣金 → 喷涂 → 装配 → 出货四道工序进度：每月约 10 张订单、约 1,500 台智能柜，同时兼顾零部件代工订单。",
-                        "通过车间干部向三个车间（约 180 名工人）分配每日工作；现场处理问题，超出权限时及时上报。",
+                        "通过 22 名管理干部（部门主管、组长、班长）向三个车间（约 180 名工人）分配每日工作；现场处理问题，超出权限时及时向厂长汇报。",
                         "跟踪订单直至交付；向厂长及管理层提交生产报表。",
                     ]),
                     ("流程与团队", [
@@ -159,7 +159,7 @@ DATA = {
                     ("Planning & progress", [
                         "Own order-based production planning and progress across metal → paint → assembly → shipping: ~10 orders "
                         "and ~1,500 smart lockers a month, plus OEM component orders.",
-                        "Allocate daily work to three workshops (~180 operators) through their supervisors; resolve issues on the spot and escalate to the Factory Manager when needed.",
+                        "Allocate daily work to three workshops (~180 operators) through 22 supervisors and team leaders; resolve issues on the spot and escalate to the Factory Manager when needed.",
                         "Follow orders through to delivery; report production status to the Factory Manager and management.",
                     ]),
                     ("Process & people", [
