@@ -60,7 +60,7 @@ describe("SelectedWork", () => {
     expect(cards()).toHaveLength(projects.length);
     expect(
       within(cards()[0]).getByRole("heading", {
-        name: "AI + MCP + SketchUp Automation",
+        name: "Manufacturing MES Platform",
       }),
     ).toBeInTheDocument();
     expect(within(cards()[0]).getByText("Dự án nổi bật")).toBeInTheDocument();
@@ -103,6 +103,6 @@ describe("SelectedWork", () => {
     const link = within(cards()[0]).getByRole("link", {
       name: /xem chi tiết/i,
     });
-    expect(link).toHaveAttribute("href", "/projects/sketchup-mcp");
+    expect(link).toHaveAttribute("href", "/projects/mes");
   });
 });

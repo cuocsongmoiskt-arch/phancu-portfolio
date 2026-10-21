@@ -41,10 +41,10 @@ describe("projects", () => {
     for (const p of projects) expect(PROJECT_STATUSES).toContain(p.status);
   });
 
-  it("dự án nổi bật duy nhất là AI + MCP + SketchUp và đứng đầu", () => {
+  it("dự án nổi bật duy nhất là MES và đứng đầu", () => {
     const featured = projects.filter((p) => p.featured);
-    expect(featured.map((p) => p.slug)).toEqual(["sketchup-mcp"]);
-    expect(projects[0].slug).toBe("sketchup-mcp");
+    expect(featured.map((p) => p.slug)).toEqual(["mes"]);
+    expect(projects[0].slug).toBe("mes");
   });
 
   it("dự án chưa có ảnh thực tế phải có sơ đồ quy trình để hiển thị", () => {

@@ -128,7 +128,7 @@ Mỗi dự án có đúng một trong ba trạng thái:
 | `planned`    | Kế hoạch       | Planned     | 规划中 | Mới nghiên cứu, định hướng — chưa triển khai     |
 
 Nhãn của khối kết quả đổi theo trạng thái (Kết quả / Hiện trạng / Kết quả kỳ vọng) để ý tưởng
-không bị đọc thành thành tích. Dự án `featured: true` (AI + MCP + SketchUp) đứng đầu, card rộng toàn hàng.
+không bị đọc thành thành tích. Dự án `featured: true` (MES — hệ thống đang vận hành thật) đứng đầu, card rộng toàn hàng.
 Trang chủ có bộ lọc theo trạng thái thay cho công tắc Quản lý / Kỹ thuật cũ.
 
 Chưa có ảnh thực tế (`images: []`) thì card vẽ sơ đồ quy trình từ `flow` và ghi rõ

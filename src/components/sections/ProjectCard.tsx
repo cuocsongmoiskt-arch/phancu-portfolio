@@ -52,13 +52,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         {/* hình: ảnh thực tế hoặc sơ đồ quy trình */}
         <div
           className={`border-b border-line bg-bg-alt ${
-            featured ? "md:order-last md:border-b-0 md:border-l" : ""
+            featured ? "md:order-last md:h-full md:border-b-0 md:border-l" : ""
           }`}
         >
           <ProjectVisual
             project={project}
             alt={item.title}
             caption={labels.diagram}
+            fill={featured}
             sizes={
               featured
                 ? "(max-width: 768px) 100vw, 620px"

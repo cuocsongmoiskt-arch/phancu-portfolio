@@ -31,7 +31,7 @@
       "Digital Transformation · MES",
       "AI & Automation"
     ],
-    "positioning": "Production manager with hands-on factory experience — built the plant’s MES platform, runs its IT infrastructure, and is now developing AI + MCP + SketchUp design automation.",
+    "positioning": "Production manager with hands-on factory experience — owns planning and progress for three workshops (~180 operators), built the plant’s MES and runs its IT infrastructure; now developing AI design automation.",
     "cta": {
       "experience": "View experience",
       "projects": "Featured projects",
@@ -168,7 +168,7 @@
         "bullets": [
           "Building order-based production plans and controlling progress across metal → paint → assembly → shipping.",
           "Tracking a flow of around 10 orders per month, roughly 1,500 smart lockers, alongside OEM orders for premium cabinet components on the domestic market.",
-          "Reporting directly to the Plant Director and working through the supervisors of three workshops to set daily assignments; resolving issues and escalating when beyond my authority.",
+          "Reporting directly to the Plant Director; allocating work and reassigning manpower daily across the three workshops to match order progress; personally tracing and fixing the root cause of defects on the floor.",
           "Designed the semi-finished goods warehouse system covering more than 1,100 codes — part of the plant’s 5,000+ material codes.",
           "Built and operate the internal management systems (MES, warehouse, documents) that serve production management directly — from business analysis to deployment, without a separate IT team.",
           "Operating and troubleshooting the plant’s computers, LAN, printers, cameras and shared systems.",
@@ -179,13 +179,13 @@
       }
     ],
     "sinceLabel": "Period",
-    "scopeNote": "Working through the supervisors of the metal, paint and assembly workshops — no direct line management of operators."
+    "scopeNote": "Allocating work for ~180 operators across the metal, paint and assembly workshops through 22 supervisors and team leaders."
   },
   "projects": {
     "sectionCode": "SEC 04",
     "sectionName": "Projects",
     "title": "Featured projects",
-    "lead": "Systems running on a real factory floor, plus AI and automation projects in development. Every project states its status — ideas and plans are never presented as finished work.",
+    "lead": "Systems running on a real factory floor — MES, production data digitalization, IT infrastructure — plus AI and automation projects in development. Every project states its status — ideas and plans are never presented as finished work.",
     "status": {
       "completed": "Completed",
       "inProgress": "In Progress",
@@ -367,9 +367,8 @@
     "targetLabel": "Target roles",
     "targets": [
       "Production Supervisor",
-      "Deputy Production Manager",
-      "Production Manager",
-      "Operations Manager"
+      "Workshop Supervisor",
+      "Deputy Production Manager"
     ],
     "labels": {
       "email": "Email",

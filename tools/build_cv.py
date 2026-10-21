@@ -249,12 +249,14 @@ def story(lang, photo_path):
 
     # ---- Kỹ năng · ngoại ngữ · học vấn · dự án cá nhân ----
     label_w = 38 * mm if lang != 'zh' else 26 * mm
-    out += [Heading(d['h_skills'], B), two_col(d['skills'], S, label_w, width)]
+    # Dự án cá nhân gộp thành một hàng của bảng Kỹ năng: ít liên quan nhất với vị trí sản xuất,
+    # không đáng một tiêu đề riêng (tiết kiệm chỗ để CV giữ một trang)
+    skills = d['skills'] + [(d['h_other'].capitalize(), d['other'])]
+    out += [Heading(d['h_skills'], B), two_col(skills, S, label_w, width)]
     out += [Heading(d['h_lang'], B), two_col(d['langs'], S, label_w, width)]
     out += [Heading(d['h_edu'], B),
             Paragraph('<font name="%s" color="#1E2A33">%s</font>%s%s%s%s'
                       % (M, esc(d['edu'][0]), dot, esc(d['edu'][1]), dot, esc(d['edu'][2])), S['body'])]
-    out += [Heading(d['h_other'], B), Paragraph(esc(d['other']), S['body'])]
     return out
 
 
@@ -294,6 +296,8 @@ def build(lang, photo_path):
     )
     doc.build(story(lang, photo_path), onFirstPage=decorate(lang), onLaterPages=decorate(lang))
     print('đã tạo %s (%d trang)' % (os.path.relpath(path, os.path.join(ROOT, '..')), doc.page))
+    if doc.page > 1:
+        raise SystemExit('DỪNG (%s): CV tràn sang trang %d — rút gọn nội dung trong cv_data.py' % (lang, doc.page))
     return path
 
 
@@ -321,7 +325,7 @@ def merge(paths, name, langs):
     w.page_mode = '/UseOutlines'
     with open(os.path.join(CV_DIR, name), 'wb') as f:
         w.write(f)
-    print('đã tạo public/cv/%s (%d trang: %s)' % (name, len(langs), ' · '.join(LABELS[l] for l in langs)))
+    print('đã tạo public/cv/%s (%d trang: %s)' % (name, len(w.pages), ' · '.join(LABELS[l] for l in langs)))
 
 
 if __name__ == '__main__':

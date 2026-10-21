@@ -11,17 +11,24 @@ export default function ProjectVisual({
   alt,
   caption,
   sizes,
+  fill = false,
 }: {
   project: Project;
   alt: string;
   caption: string;
   sizes: string;
+  /** Card nổi bật: ảnh giãn hết chiều cao cột thay vì giữ tỉ lệ 16:10 */
+  fill?: boolean;
 }) {
   const cover = project.images[0];
 
   if (cover) {
     return (
-      <div className="media-reveal zoom-wrap relative aspect-[16/10] w-full bg-bg-alt">
+      <div
+        className={`media-reveal zoom-wrap relative aspect-[16/10] w-full bg-bg-alt ${
+          fill ? "md:aspect-auto md:h-full md:min-h-[420px]" : ""
+        }`}
+      >
         <Image
           src={cover.src}
           alt={alt}

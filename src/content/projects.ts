@@ -24,25 +24,10 @@ export type Project = {
 /** Dữ liệu không phụ thuộc ngôn ngữ. Chữ hiển thị ở messages/*.json → projects.items.<slug> */
 export const projects: Project[] = [
   {
-    slug: "sketchup-mcp",
-    no: "01",
-    status: "inProgress",
-    featured: true,
-    tech: ["AI Agent", "MCP Server", "SketchUp Extension", "SketchUp Ruby API"],
-    scope: [
-      "Agent-to-MCP Bridge",
-      "Reusable Design Rules",
-      "Automated Modeling",
-      "Design Data Processing",
-      "3D View Capture",
-    ],
-    flow: ["AI Agent", "MCP Server", "SketchUp Extension", "SketchUp Ruby API"],
-    images: [],
-  },
-  {
     slug: "mes",
-    no: "02",
+    no: "01",
     status: "completed",
+    featured: true,
     tech: ["Node.js", "SQL / SQLite", "Windows Server", "Nginx", "LAN"],
     scope: [
       "Production Planning",
@@ -64,7 +49,7 @@ export const projects: Project[] = [
   },
   {
     slug: "digital",
-    no: "03",
+    no: "02",
     status: "completed",
     tech: ["Python", "Flask", "Pandas", "Excel", "Windows Service"],
     scope: [
@@ -82,7 +67,7 @@ export const projects: Project[] = [
   },
   {
     slug: "itsys",
-    no: "04",
+    no: "03",
     status: "completed",
     tech: ["Windows Server", "LAN / IP", "Nginx", "SMB", "Batch"],
     scope: [
@@ -98,6 +83,21 @@ export const projects: Project[] = [
       { src: "/projects/it-toolkit.webp", width: 1600, height: 858 },
       { src: "/projects/company-website.webp", width: 1600, height: 832 },
     ],
+  },
+  {
+    slug: "sketchup-mcp",
+    no: "04",
+    status: "inProgress",
+    tech: ["AI Agent", "MCP Server", "SketchUp Extension", "SketchUp Ruby API"],
+    scope: [
+      "Agent-to-MCP Bridge",
+      "Reusable Design Rules",
+      "Automated Modeling",
+      "Design Data Processing",
+      "3D View Capture",
+    ],
+    flow: ["AI Agent", "MCP Server", "SketchUp Extension", "SketchUp Ruby API"],
+    images: [],
   },
   {
     slug: "software-qa",

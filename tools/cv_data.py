@@ -36,10 +36,11 @@ DATA = {
                     ("Kế hoạch & tiến độ", [
                         "Phụ trách kế hoạch sản xuất theo đơn hàng và tiến độ 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng: "
                         "~10 đơn hàng, ~1.500 tủ thông minh mỗi tháng, cùng các đơn gia công linh kiện.",
-                        "Phân bổ công việc hằng ngày cho 3 xưởng (~180 công nhân) qua 22 cán bộ quản lý — chủ quản bộ phận, tổ trưởng, nhóm trưởng; xử lý vướng mắc tại chỗ, báo cáo Giám đốc Nhà máy khi vượt thẩm quyền.",
+                        "Phân bổ công việc và điều chuyển nhân lực hằng ngày giữa 3 xưởng (~180 công nhân) theo tiến độ đơn hàng, qua 22 cán bộ quản lý — chủ quản bộ phận, tổ trưởng, nhóm trưởng.",
                         "Bám đơn hàng tới khi giao; lập báo cáo sản xuất cho Giám đốc Nhà máy và Ban Giám đốc.",
                     ]),
-                    ("Quy trình & con người", [
+                    ("Chất lượng, quy trình & con người", [
+                        "Trực tiếp tìm nguyên nhân gốc khi phát sinh hàng lỗi và xử lý tại xưởng; báo cáo khi vượt thẩm quyền.",
                         "Chuẩn hoá biểu mẫu, SOP và cách ghi số liệu sản xuất; áp dụng 5S, Kaizen trong hệ thống ISO 9001 của nhà máy.",
                         "Đào tạo công nhân mới vào việc; huấn luyện cán bộ cấp trung phương pháp lập kế hoạch, theo dõi tiến độ và báo cáo.",
                         "Phối hợp Kho, Nhân sự, Chất lượng, IT giải quyết vấn đề liên bộ phận; chuyển tải yêu cầu công việc Việt – Trung.",
@@ -62,8 +63,8 @@ DATA = {
         ],
         "h_skills": "KỸ NĂNG",
         "skills": [
-            ("Quản lý sản xuất", "Kế hoạch sản xuất · Kiểm soát tiến độ · Quản lý đơn hàng · Phân bổ công việc xưởng · Đào tạo"),
-            ("Cải tiến & chất lượng", "5S · Kaizen · SOP · ISO 9001 · Phân tích nguyên nhân gốc"),
+            ("Quản lý sản xuất", "Kế hoạch sản xuất · Kiểm soát tiến độ · Quản lý đơn hàng · Điều phối nhân lực · Đào tạo"),
+            ("Cải tiến & chất lượng", "Xử lý hàng lỗi · Phân tích nguyên nhân gốc · 5S · Kaizen · SOP · ISO 9001"),
             ("Dữ liệu & công cụ", "Excel · SQL · MES · Quản lý kho · Python"),
         ],
         "h_lang": "NGOẠI NGỮ",
@@ -74,7 +75,7 @@ DATA = {
         "h_edu": "HỌC VẤN",
         "edu": ("Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh", "Kỹ thuật Điện tử Công nghiệp", "Tốt nghiệp 09/2019"),
         "h_other": "DỰ ÁN CÁ NHÂN",
-        "other": "Đang phát triển: tự động hoá thiết kế 3D bằng AI (AI Agent kết nối SketchUp qua MCP) — phandinh.site",
+        "other": "Đang phát triển: tự động hoá thiết kế 3D bằng AI (AI Agent ↔ SketchUp qua MCP)",
     },
 
     "zh": {
@@ -96,10 +97,11 @@ DATA = {
                 "groups": [
                     ("计划与进度", [
                         "负责按订单编制生产计划，管控钣金 → 喷涂 → 装配 → 出货四道工序进度：每月约 10 张订单、约 1,500 台智能柜，同时兼顾零部件代工订单。",
-                        "通过 22 名管理干部（部门主管、组长、班长）向三个车间（约 180 名工人）分配每日工作；现场处理问题，超出权限时及时向厂长汇报。",
+                        "根据订单进度，通过 22 名管理干部（部门主管、组长、班长）每日分配工作并调配三个车间约 180 名工人。",
                         "跟踪订单直至交付；向厂长及管理层提交生产报表。",
                     ]),
-                    ("流程与团队", [
+                    ("质量、流程与团队", [
+                        "出现不良品时亲自追查根本原因并在车间现场处理；超出权限时及时向厂长汇报。",
                         "规范表单、SOP 与生产数据记录方式；在工厂 ISO 9001 体系内推行 5S、改善（Kaizen）。",
                         "为新入职工人做上岗培训；向车间中层干部传授计划、进度跟踪、问题处理与汇报方法。",
                         "与仓库、人事、品质、IT 协作解决跨部门问题；在中越两种语言之间传达工作要求。",
@@ -122,8 +124,8 @@ DATA = {
         ],
         "h_skills": "专业技能",
         "skills": [
-            ("生产管理", "生产计划 · 进度管控 · 订单管理 · 车间工作分配 · 生产报表 · 培训"),
-            ("改善与质量", "5S · 改善（Kaizen）· SOP · ISO 9001 · 根因分析"),
+            ("生产管理", "生产计划 · 进度管控 · 订单管理 · 人力调配 · 生产报表 · 培训"),
+            ("改善与质量", "不良品处理 · 根因分析 · 5S · 改善（Kaizen）· SOP · ISO 9001"),
             ("数据与工具", "Excel · SQL · MES · 仓库管理 · Python"),
         ],
         "h_lang": "语言能力",
@@ -159,10 +161,11 @@ DATA = {
                     ("Planning & progress", [
                         "Own order-based production planning and progress across metal → paint → assembly → shipping: ~10 orders "
                         "and ~1,500 smart lockers a month, plus OEM component orders.",
-                        "Allocate daily work to three workshops (~180 operators) through 22 supervisors and team leaders; resolve issues on the spot and escalate to the Factory Manager when needed.",
+                        "Allocate work and reassign manpower daily across three workshops (~180 operators) to match order progress, through 22 supervisors and team leaders.",
                         "Follow orders through to delivery; report production status to the Factory Manager and management.",
                     ]),
-                    ("Process & people", [
+                    ("Quality, process & people", [
+                        "Personally trace the root cause of defects and fix them on the shop floor; escalate when beyond my authority.",
                         "Standardised forms, SOPs and production data recording; apply 5S and Kaizen within the plant's ISO 9001 system.",
                         "Train new operators; coach mid-level supervisors on planning, progress tracking, issue handling and reporting.",
                         "Resolve cross-functional issues with Warehouse, HR, Quality and IT; relay requirements in Vietnamese and Chinese.",
@@ -185,8 +188,8 @@ DATA = {
         ],
         "h_skills": "SKILLS",
         "skills": [
-            ("Production management", "Production planning · Progress control · Order management · Work allocation · Training"),
-            ("Improvement & quality", "5S · Kaizen · SOP · ISO 9001 · Root-cause analysis"),
+            ("Production management", "Production planning · Progress control · Order management · Manpower allocation · Training"),
+            ("Improvement & quality", "Defect handling · Root-cause analysis · 5S · Kaizen · SOP · ISO 9001"),
             ("Data & tools", "Excel · SQL · MES · Warehouse control · Python"),
         ],
         "h_lang": "LANGUAGES",
@@ -198,6 +201,6 @@ DATA = {
         "h_edu": "EDUCATION",
         "edu": ("Ho Chi Minh City University of Technology and Education", "Industrial Electronics Engineering", "Graduated 09/2019"),
         "h_other": "PERSONAL PROJECT",
-        "other": "In progress: AI-driven 3D design automation (AI agent ↔ SketchUp via MCP). Details: phandinh.site",
+        "other": "In progress: AI-driven 3D design automation (AI agent ↔ SketchUp via MCP) — phandinh.site",
     },
 }

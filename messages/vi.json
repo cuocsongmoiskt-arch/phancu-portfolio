@@ -31,7 +31,7 @@
       "Digital Transformation · MES",
       "AI & Automation"
     ],
-    "positioning": "Quản lý sản xuất với kinh nghiệm thực tế tại nhà máy — tự xây dựng nền tảng MES, vận hành hạ tầng IT, và đang phát triển giải pháp tự động hoá thiết kế bằng AI + MCP + SketchUp.",
+    "positioning": "Quản lý sản xuất với kinh nghiệm thực tế tại nhà máy — phụ trách kế hoạch và tiến độ 3 xưởng (~180 công nhân), tự xây dựng nền tảng MES và vận hành hạ tầng IT; đang phát triển tự động hoá thiết kế bằng AI.",
     "cta": {
       "experience": "Xem kinh nghiệm",
       "projects": "Dự án tiêu biểu",
@@ -168,7 +168,7 @@
         "bullets": [
           "Lập kế hoạch sản xuất theo đơn hàng và kiểm soát tiến độ qua 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng.",
           "Theo dõi luồng khoảng 10 đơn hàng mỗi tháng, tương đương ~1.500 tủ thông minh, song song với các đơn gia công linh kiện tủ cao cấp cho thị trường trong nước.",
-          "Báo cáo trực tiếp cho Giám đốc Nhà máy (Plant Director) và làm việc cùng cán bộ quản lý của ba xưởng để bố trí công việc; xử lý vướng mắc và báo cáo khi vượt thẩm quyền.",
+          "Báo cáo trực tiếp Giám đốc Nhà máy; phân bổ công việc và điều chuyển nhân lực hằng ngày giữa 3 xưởng theo tiến độ đơn hàng; trực tiếp tìm nguyên nhân gốc và xử lý hàng lỗi tại xưởng.",
           "Thiết kế hệ thống quản lý kho bán thành phẩm với hơn 1.100 mã — một phần trong tổng số hơn 5.000 mã vật tư của nhà máy.",
           "Tự xây dựng và vận hành hệ thống quản lý nội bộ (MES, kho, tài liệu) phục vụ trực tiếp công tác quản lý sản xuất — từ khảo sát nghiệp vụ đến triển khai, không qua đội IT riêng.",
           "Vận hành và xử lý sự cố máy tính, mạng LAN, máy in, camera và các hệ thống dùng chung của nhà máy.",
@@ -179,13 +179,13 @@
       }
     ],
     "sinceLabel": "Thời gian",
-    "scopeNote": "Làm việc qua cán bộ quản lý của 3 xưởng Kim loại · Sơn · Lắp ráp — không trực tiếp quản lý công nhân."
+    "scopeNote": "Phân bổ công việc cho ~180 công nhân của 3 xưởng Kim loại · Sơn · Lắp ráp qua 22 cán bộ quản lý: chủ quản bộ phận, tổ trưởng, nhóm trưởng."
   },
   "projects": {
     "sectionCode": "SEC 04",
     "sectionName": "Dự án",
     "title": "Dự án tiêu biểu",
-    "lead": "Hệ thống đã chạy thật tại nhà máy và các dự án AI, tự động hoá đang phát triển. Mỗi dự án ghi rõ trạng thái — ý tưởng và kế hoạch không được trình bày như thành tích đã hoàn thành.",
+    "lead": "Các hệ thống đang vận hành thật tại nhà máy — MES, số hoá dữ liệu sản xuất, hạ tầng IT — cùng các dự án AI và tự động hoá đang phát triển. Mỗi dự án ghi rõ trạng thái — ý tưởng và kế hoạch không được trình bày như thành tích đã hoàn thành.",
     "status": {
       "completed": "Hoàn thành",
       "inProgress": "Đang thực hiện",
@@ -366,10 +366,9 @@
     "lead": "Nếu đơn vị của anh/chị cần một người hiểu cả xưởng, hệ thống và cách đưa AI, tự động hoá vào công việc thực tế, hãy liên hệ trực tiếp.",
     "targetLabel": "Vị trí hướng tới",
     "targets": [
+      "Chủ quản Sản xuất",
       "Giám sát Sản xuất",
-      "Phó Quản lý Sản xuất",
-      "Quản lý Sản xuất",
-      "Quản lý Vận hành"
+      "Phó Quản lý Sản xuất"
     ],
     "labels": {
       "email": "Email",
