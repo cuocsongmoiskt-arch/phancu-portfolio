@@ -1,5 +1,6 @@
-import { useTranslations } from "next-intl";
-import { profile } from "@/content/profile";
+import { useLocale, useTranslations } from "next-intl";
+import { profile, cvByLocale } from "@/content/profile";
+import type { AppLocale } from "@/i18n/routing";
 import CopyButton from "@/components/ui/CopyButton";
 
 type Row = { key: string; label: string; value: string; href: string };
@@ -7,6 +8,7 @@ type Row = { key: string; label: string; value: string; href: string };
 export default function Contact() {
   const t = useTranslations("contact");
   const labels = t.raw("labels") as Record<string, string>;
+  const cvUrl = cvByLocale[useLocale() as AppLocale];
 
   const rows: Row[] = [
     profile.email && {
@@ -103,9 +105,9 @@ export default function Contact() {
         </ul>
 
         <div className="mt-10 flex flex-col items-start gap-10 md:flex-row md:items-center md:justify-between">
-          {profile.cvUrl ? (
+          {cvUrl ? (
             <a
-              href={profile.cvUrl}
+              href={cvUrl}
               className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-[15px] font-medium text-ink-900 transition-colors hover:bg-accent-600 hover:text-white"
             >
               {labels.cv} ↓

@@ -2,7 +2,10 @@ import { describe, it, expect } from "vitest";
 import vi from "../../../messages/vi.json";
 import en from "../../../messages/en.json";
 import zh from "../../../messages/zh.json";
+import { existsSync } from "node:fs";
+import path from "node:path";
 import { projects, PROJECT_STATUSES } from "../projects";
+import { cvByLocale, profile } from "../profile";
 
 const locales = { vi, en, zh } as const;
 
@@ -80,4 +83,14 @@ describe("projects", () => {
       }
     },
   );
+});
+
+describe("cv", () => {
+  it("mỗi ngôn ngữ có file CV riêng trong public/cv", () => {
+    const pub = path.resolve(__dirname, "../../../public");
+    expect(Object.keys(cvByLocale).sort()).toEqual(Object.keys(locales).sort());
+    for (const url of [...Object.values(cvByLocale), profile.cvUrl]) {
+      expect(existsSync(path.join(pub, url)), url).toBe(true);
+    }
+  });
 });

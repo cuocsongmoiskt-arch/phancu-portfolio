@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 import Parallax from "@/components/ui/Parallax";
 import CountUp from "@/components/ui/CountUp";
 import { Link } from "@/i18n/routing";
-import { profile, nameByLocale } from "@/content/profile";
+import { profile, nameByLocale, cvByLocale } from "@/content/profile";
 import type { AppLocale } from "@/i18n/routing";
 
 type Snap = { value: string; label: string };
@@ -100,11 +100,7 @@ export default function Hero() {
                 <Button href="#experience" variant="outline">
                   {cta.experience}
                 </Button>
-                <Button
-                  href={profile.cvUrl}
-                  variant="outline"
-                  disabled={!profile.cvUrl}
-                >
+                <Button href={cvByLocale[locale]} variant="outline">
                   {cta.cv} ↓
                 </Button>
               </div>

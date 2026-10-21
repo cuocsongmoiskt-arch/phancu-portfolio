@@ -9,7 +9,7 @@ export const profile = {
   phone: "0888523894",
   linkedin: "https://www.linkedin.com/in/phandinhcu",
   github: "",
-  cvUrl: "/cv/PhanCu_CV.pdf", // CV 3 ngôn ngữ VI / 中文 / EN
+  cvUrl: "/cv/PhanCu_CV.pdf", // bản tiếng Việt — giữ đường dẫn cũ cho các hồ sơ đã gửi
   zalo: "0888523894", // Zalo dùng chung số điện thoại
   workSince: "04/2024 – nay",
   siteUrl: "https://phandinh.site",
@@ -18,6 +18,13 @@ export const profile = {
 
 // Tên hiển thị theo ngôn ngữ — riêng bản Trung dùng đúng tên phiên âm chữ Hán (潘廷巨),
 // không phải phiên âm máy dịch. vi/en giữ cùng nội dung (có/không dấu là khác biệt duy nhất).
+// CV đúng ngôn ngữ đang xem — mỗi bản 1 trang, tạo bằng tools/build_cv.py
+export const cvByLocale = {
+  vi: "/cv/PhanCu_CV_VI.pdf",
+  en: "/cv/PhanCu_CV_EN.pdf",
+  zh: "/cv/PhanCu_CV_ZH.pdf",
+} as const;
+
 export const nameByLocale = {
   vi: profile.name,
   en: "PHAN DINH CU",

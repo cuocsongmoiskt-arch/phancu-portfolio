@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import type { AppLocale } from "@/i18n/routing";
-import { profile, nameByLocale } from "@/content/profile";
+import { cvByLocale, nameByLocale } from "@/content/profile";
 
 const NAV = [
   { id: "capabilities", href: "#capabilities" },
@@ -158,8 +158,9 @@ export default function SiteHeader() {
           </div>
 
           <a
-            href={profile.cvUrl || "#contact"}
-            {...(profile.cvUrl ? { target: "_blank", rel: "noopener" } : {})}
+            href={cvByLocale[locale]}
+            target="_blank"
+            rel="noopener"
             className="rounded-full border border-line px-4 py-2 text-[14px] transition-colors hover:border-ink-900 hover:bg-ink-900 hover:text-white"
           >
             {t("cv")} ↗
