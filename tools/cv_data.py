@@ -37,7 +37,7 @@ DATA = {
                     ("Kế hoạch & tiến độ", [
                         "Lập kế hoạch sản xuất theo đơn hàng, kiểm soát tiến độ qua 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng "
                         "cho ~10 đơn hàng, ~1.500 tủ thông minh mỗi tháng, song song các đơn gia công linh kiện.",
-                        "Điều phối công việc hằng ngày qua cán bộ quản lý của 3 xưởng; xử lý vướng mắc phát sinh, báo cáo khi vượt thẩm quyền.",
+                        "Điều phối công việc hằng ngày qua cán bộ quản lý của 3 xưởng; xử lý vướng mắc, báo cáo khi vượt thẩm quyền.",
                         "Theo dõi đơn hàng tới khi giao; lập báo cáo sản xuất cho Giám đốc Nhà máy và Ban Giám đốc.",
                     ]),
                     ("Quy trình & con người", [
@@ -46,18 +46,24 @@ DATA = {
                         "Phối hợp Kho, Nhân sự, Chất lượng, IT giải quyết vấn đề liên bộ phận; chuyển tải yêu cầu công việc Việt – Trung.",
                     ]),
                     ("Số hoá quản lý sản xuất", [
-                        "Xây dựng hệ thống MES nội bộ: Ban Giám đốc xem kế hoạch và tiến độ 3 xưởng trên một màn hình, "
-                        "thay vì chờ báo cáo tổng hợp tay sau 1 ngày.",
+                        "Xây dựng MES nội bộ: BGĐ xem kế hoạch, tiến độ 3 xưởng trên một màn hình thay vì chờ báo cáo tay 1 ngày.",
                         "Thiết kế hệ thống kho bán thành phẩm hơn 1.100 mã (trong 5.000+ mã vật tư): tra tồn kho, vị trí theo thời gian thực.",
                         "Số hoá đối chiếu chấm công và sản lượng theo tổ — không còn phụ thuộc thao tác Excel thủ công của một người.",
                         "Vận hành hạ tầng IT nhà máy: máy tính, mạng LAN, máy in, camera, máy chủ.",
                     ]),
                 ],
             },
+            {
+                "company": "TỰ KINH DOANH",
+                "role": "Chủ cửa hàng — khởi nghiệp",
+                "period": "2019 – 2024",
+                "meta": "Tự mở và vận hành cửa hàng sau khi tốt nghiệp.",
+                "groups": [],
+            },
         ],
         "h_skills": "KỸ NĂNG",
         "skills": [
-            ("Quản lý sản xuất", "Lập kế hoạch sản xuất · Kiểm soát tiến độ · Quản lý đơn hàng · Điều phối xưởng · Báo cáo sản xuất · Đào tạo"),
+            ("Quản lý sản xuất", "Kế hoạch sản xuất · Kiểm soát tiến độ · Quản lý đơn hàng · Điều phối xưởng · Đào tạo"),
             ("Cải tiến & chất lượng", "5S · Kaizen · SOP · ISO 9001 · Phân tích nguyên nhân gốc"),
             ("Dữ liệu & công cụ", "Excel · SQL · MES · Quản lý kho · Python"),
         ],
@@ -69,7 +75,7 @@ DATA = {
         "h_edu": "HỌC VẤN",
         "edu": ("Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh", "Kỹ thuật Điện tử Công nghiệp", "Tốt nghiệp 09/2019"),
         "h_other": "DỰ ÁN CÁ NHÂN",
-        "other": "Đang phát triển công cụ tự động hoá thiết kế 3D bằng AI (AI Agent kết nối SketchUp qua MCP). Chi tiết: phandinh.site",
+        "other": "Đang phát triển: tự động hoá thiết kế 3D bằng AI (AI Agent kết nối SketchUp qua MCP) — phandinh.site",
     },
 
     "zh": {
@@ -106,6 +112,13 @@ DATA = {
                         "负责工厂 IT 基础设施：电脑、局域网、打印机、监控摄像头、服务器。",
                     ]),
                 ],
+            },
+            {
+                "company": "自主创业",
+                "role": "店主 — 创业",
+                "period": "2019 – 2024",
+                "meta": "毕业后自主开设并经营门店。",
+                "groups": [],
             },
         ],
         "h_skills": "专业技能",
@@ -162,6 +175,13 @@ DATA = {
                         "Run the plant's IT infrastructure: PCs, LAN, printers, cameras, server.",
                     ]),
                 ],
+            },
+            {
+                "company": "SELF-EMPLOYED",
+                "role": "Shop owner — own business",
+                "period": "2019 – 2024",
+                "meta": "Opened and ran my own shop after graduating.",
+                "groups": [],
             },
         ],
         "h_skills": "SKILLS",

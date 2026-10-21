@@ -232,7 +232,9 @@ def story(lang, photo_path):
 
     # ---- Kinh nghiệm ----
     out.append(Heading(d['h_exp'], B))
-    for job in d['jobs']:
+    for i, job in enumerate(d['jobs']):
+        if i:
+            out.append(Spacer(1, 9))
         out.append(plain_table(
             [[Paragraph(esc(job['company']), S['company']), Paragraph(esc(job['period']), S['period'])]],
             [width * 0.7, width * 0.3], [('VALIGN', (0, 0), (-1, -1), 'BOTTOM')]))

@@ -33,12 +33,12 @@ Quy tắc: **không viết chữ cứng trong component**. Chữ hiển thị n�
 
 Mở `src/content/profile.ts`:
 
-| Trường               | Ghi chú                                                                                           |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
-| `email`, `phone`     | hiển thị ở section Contact                                                                        |
-| `linkedin`, `github` | bỏ trống thì ẩn dòng đó                                                                           |
-| `cvByLocale`         | CV riêng từng ngôn ngữ — tạo bằng `python3 tools/build_cv.py` (sửa nội dung ở `tools/cv_data.py`) |
-| `siteUrl`            | domain thật, dùng cho metadata + sitemap                                                          |
+| Trường               | Ghi chú                                                                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `email`, `phone`     | hiển thị ở section Contact                                                                                                                             |
+| `linkedin`, `github` | bỏ trống thì ẩn dòng đó                                                                                                                                |
+| `cvByLocale`         | CV riêng từng ngôn ngữ — tạo bằng `python3 tools/build_cv.py` (sửa nội dung ở `tools/cv_data.py`); bản zh báo thiếu chữ thì chạy `tools/subset_cjk.py` |
+| `siteUrl`            | domain thật, dùng cho metadata + sitemap                                                                                                               |
 
 ## Ghi chú kỹ thuật
 
