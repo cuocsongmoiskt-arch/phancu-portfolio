@@ -19,12 +19,13 @@ DATA = {
         "file": "PhanCu_CV_VI.pdf",
         "name": "PHAN ĐÌNH CỰ",
         "title": "Giám sát Sản xuất · Phó Quản lý Sản xuất",
-        "location": "Sẵn sàng làm việc tại mọi khu vực",
+        "location": "Làm việc mọi khu vực",
+        "facts": [("2,5 năm", "quản lý sản xuất"), ("~1.500", "tủ / tháng"), ("3 xưởng", "~250 nhân sự"), ("HSK 4+", "tiếng Trung")],
         "h_summary": "TÓM TẮT",
-        "summary": "2,5 năm phụ trách quản lý sản xuất tại nhà máy sản xuất tủ khoá thông minh (~250 nhân sự, 3 xưởng Kim loại – Sơn – "
-                   "Lắp ráp), Ban Giám đốc người Trung Quốc. Lập kế hoạch theo đơn hàng và kiểm soát tiến độ cho ~10 đơn hàng, "
-                   "~1.500 tủ mỗi tháng; báo cáo trực tiếp Giám đốc Nhà máy. Tiếng Trung HSK 4+, làm việc trực tiếp với quản lý "
-                   "Trung Quốc. Tự xây dựng hệ thống MES và kho bán thành phẩm để số liệu sản xuất minh bạch theo thời gian thực.",
+        "summary": "Phụ trách quản lý sản xuất tại nhà máy tủ khoá thông minh có Ban Giám đốc người Trung Quốc: lập kế hoạch theo "
+                   "đơn hàng, kiểm soát tiến độ 3 xưởng Kim loại – Sơn – Lắp ráp, báo cáo trực tiếp Giám đốc Nhà máy. Dùng tiếng Trung "
+                   "hằng ngày với quản lý Trung Quốc. Tự xây dựng MES và hệ thống kho bán thành phẩm để số liệu sản xuất minh bạch "
+                   "theo thời gian thực.",
         "h_exp": "KINH NGHIỆM LÀM VIỆC",
         "jobs": [
             {
@@ -76,10 +77,10 @@ DATA = {
         "name": "潘廷巨  PHAN DINH CU",
         "title": "生产主管 · 生产副经理",
         "location": "工作地点不限",
+        "facts": [("2.5 年", "生产管理"), ("~1,500", "台 / 月"), ("3 个车间", "约 250 人"), ("HSK 4+", "中文")],
         "h_summary": "个人简介",
-        "summary": "2.5 年智能柜制造工厂生产管理经验（约 250 人，钣金、喷涂、装配三个车间），中方管理层。按订单编制生产计划并管控进度，"
-                   "每月约 10 张订单、约 1,500 台智能柜；直接向厂长汇报。中文 HSK 4+，可直接与中方管理层沟通。"
-                   "自主搭建 MES 系统与半成品仓库系统，让生产数据实时透明。",
+        "summary": "在中方管理的智能柜工厂负责生产管理：按订单编制生产计划，管控钣金、喷涂、装配三个车间的进度，直接向厂长汇报。"
+                   "日常用中文与中方管理层沟通。自主搭建 MES 与半成品仓库系统，让生产数据实时透明。",
         "h_exp": "工作经历",
         "jobs": [
             {
@@ -130,11 +131,11 @@ DATA = {
         "name": "PHAN DINH CU",
         "title": "Production Supervisor · Deputy Production Manager",
         "location": "Open to relocation",
+        "facts": [("2.5 yrs", "in production"), ("~1,500", "units / month"), ("3 workshops", "~250 staff"), ("HSK 4+", "Chinese")],
         "h_summary": "SUMMARY",
-        "summary": "2.5 years in production management at a smart-locker plant (~250 people, three workshops: metal, paint, assembly) "
-                   "under Chinese management. Builds order-based production plans and controls progress for ~10 orders and ~1,500 "
-                   "lockers a month; reports directly to the Factory Manager. Chinese HSK 4+ for daily work with Chinese management. "
-                   "Built the plant's MES and warehouse system for real-time production data.",
+        "summary": "Runs production planning and control at a Chinese-managed smart-locker plant: order-based plans, progress "
+                   "across metal, paint and assembly workshops, reporting directly to the Factory Manager. Works in Chinese daily "
+                   "with Chinese management. Built the plant's MES and warehouse system for real-time production data.",
         "h_exp": "EXPERIENCE",
         "jobs": [
             {
