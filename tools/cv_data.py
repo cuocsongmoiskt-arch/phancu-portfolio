@@ -1,210 +1,206 @@
 # -*- coding: utf-8 -*-
-"""Nội dung CV 3 ngôn ngữ. Chỉ dùng thông tin Phan Cự đã cung cấp — không thêm gì khác."""
+"""Nội dung CV 3 ngôn ngữ — mỗi ngôn ngữ xuất ra MỘT file riêng.
+
+Viết cho người tuyển dụng vị trí quản lý sản xuất và cho hệ thống lọc CV (ATS):
+- Phần sản xuất đứng trước, công nghệ là công cụ hỗ trợ, gói gọn.
+- Mỗi gạch đầu dòng bắt đầu bằng động từ + phạm vi/con số thật.
+- Chỉ dùng thông tin Phan Cự đã cung cấp — không thêm số liệu chưa có.
+"""
 
 CONTACT = {
     "email": "Phancu.edu@gmail.com",
     "phone": "0888523894",
     "site": "phandinh.site",
-    "linkedin": "",      # bổ sung sau
+    "linkedin": "linkedin.com/in/phandinhcu",
 }
 
 DATA = {
     "vi": {
-        "lang_tag": "TIẾNG VIỆT",
+        "file": "PhanDinhCu_CV_ProductionSupervisor_VI.pdf",
         "name": "PHAN ĐÌNH CỰ",
-        "role": "Production Management · Manufacturing Operations · Digital Transformation",
-        "objective": "Mục tiêu: Giám sát Sản xuất · Phó Quản lý Sản xuất · Quản lý Sản xuất · Quản lý Vận hành (hoặc vị trí tương đương)",
-        "tagline": "Kết nối Con người, Quy trình và Công nghệ.",
-        "summary": "Trợ lý Giám đốc Nhà máy từ 04/2024, nhà máy ~250 người, 3 xưởng, sản lượng ~1.500 tủ thông minh/tháng. Hằng ngày tôi theo dõi kế hoạch, "
-                   "đơn hàng và tiến độ giữa các xưởng, làm báo cáo cho Ban Giám đốc người Trung Quốc. "
-                   "Khác biệt của tôi: chuẩn hoá lại cách làm, rồi tự viết công cụ để số liệu rõ ràng và quyết định nhanh hơn.",
-        "facts": [("~1.500", "tủ thông minh / tháng"), ("~10", "đơn hàng / tháng"), ("~250", "nhân sự · 3 xưởng"), ("1.100+", "mã kho BTP tự thiết kế")],
-        "h_contact": "LIÊN HỆ",
-        "h_lang": "NGÔN NGỮ",
-        "h_edu": "HỌC VẤN",
-        "h_cap": "NĂNG LỰC QUẢN LÝ",
+        "title": "Chủ quản / Giám sát Sản xuất · Phó Quản lý Sản xuất",
+        "location": "Làm việc mọi khu vực",
+        "facts": [("2,5 năm", "quản lý sản xuất"), ("~1.500", "tủ / tháng"), ("3 xưởng", "~180 công nhân"), ("HSK 4+", "tiếng Trung")],
         "h_summary": "TÓM TẮT",
-        "h_impact": "TÔI ĐÃ THAY ĐỔI ĐIỀU GÌ",
-        "h_exp": "KINH NGHIỆM",
-        "h_work": "CÔNG CỤ QUẢN LÝ — TỰ THỰC HIỆN TOÀN BỘ",
-        "h_think": "CÁCH LÀM VIỆC",
-        "h_dir": "MỤC TIÊU NGHỀ NGHIỆP",
-        "langs": [("Tiếng Việt", "Bản ngữ"), ("Tiếng Trung — HSK 4+", "Họp, tài liệu và chuyển tải yêu cầu công việc"), ("English", "Công việc / kỹ thuật")],
-        "edu": ["Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh", "Kỹ thuật Điện tử Công nghiệp"],
-        "caps": [
-            ("Quản lý sản xuất", "Kế hoạch sản xuất · Quản lý đơn hàng · Theo dõi tiến độ · Phối hợp cán bộ 3 xưởng · Đào tạo cán bộ & công nhân · Báo cáo Ban Giám đốc"),
-            ("Quy trình & cải tiến", "ISO 9001 · 5S · Kaizen · Chuẩn hoá quy trình · Biểu mẫu / SOP · Kiểm soát tồn kho"),
-            ("Dữ liệu & báo cáo", "Excel · Pandas · SQL / SQLite · Báo cáo sản xuất · Đối chiếu chấm công"),
-            ("Công nghệ hỗ trợ", "MES · Quản lý kho · Windows Server · LAN / IP · Triển khai ứng dụng nội bộ"),
-            ("AI trong công việc", "Phân tích dữ liệu · Soạn SOP / tài liệu · Hỗ trợ xây công cụ · Tự động hoá"),
+        "summary": "Phụ trách kế hoạch và tiến độ sản xuất tại nhà máy tủ khoá thông minh có Ban Giám đốc người Trung Quốc "
+                   "(3 xưởng Kim loại – Sơn – Lắp ráp), báo cáo trực tiếp Giám đốc Nhà máy. Trước đó 4,5 năm tự điều hành kinh doanh "
+                   "máy tính – laptop. Dùng tiếng Trung hằng ngày; tự xây dựng MES để quản lý sản xuất bằng số liệu thời gian thực.",
+        "h_exp": "KINH NGHIỆM LÀM VIỆC",
+        "jobs": [
+            {
+                "company": "WEBOX VIỆT NAM",
+                "role": "Trợ lý Giám đốc Nhà máy — phụ trách Quản lý Sản xuất",
+                "period": "04/2024 – nay",
+                "meta": "Sản xuất tủ khoá thông minh và gia công linh kiện tủ cao cấp · ~250 nhân sự · 3 xưởng · môi trường Việt – Trung",
+                "groups": [
+                    ("Kế hoạch & tiến độ", [
+                        "Phụ trách kế hoạch sản xuất theo đơn hàng và tiến độ 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng: "
+                        "~10 đơn hàng, ~1.500 tủ thông minh mỗi tháng, cùng các đơn gia công linh kiện.",
+                        "Phân bổ công việc và điều chuyển nhân lực hằng ngày giữa 3 xưởng (~180 công nhân) theo tiến độ đơn hàng, qua 22 cán bộ quản lý — chủ quản bộ phận, tổ trưởng, nhóm trưởng.",
+                        "Bám đơn hàng tới khi giao; lập báo cáo sản xuất cho Giám đốc Nhà máy và Ban Giám đốc.",
+                    ]),
+                    ("Chất lượng, quy trình & con người", [
+                        "Trực tiếp tìm nguyên nhân gốc khi phát sinh hàng lỗi và xử lý tại xưởng; báo cáo khi vượt thẩm quyền.",
+                        "Chuẩn hoá biểu mẫu, SOP và cách ghi số liệu sản xuất; áp dụng 5S, Kaizen trong hệ thống ISO 9001 của nhà máy.",
+                        "Đào tạo công nhân mới vào việc; huấn luyện cán bộ cấp trung phương pháp lập kế hoạch, theo dõi tiến độ và báo cáo.",
+                        "Phối hợp Kho, Nhân sự, Chất lượng, IT giải quyết vấn đề liên bộ phận; chuyển tải yêu cầu công việc Việt – Trung.",
+                    ]),
+                    ("Số hoá quản lý sản xuất", [
+                        "Xây dựng MES nội bộ: BGĐ xem kế hoạch, tiến độ 3 xưởng trên một màn hình thay vì chờ báo cáo tay 1 ngày.",
+                        "Thiết kế hệ thống kho bán thành phẩm hơn 1.100 mã (trong 5.000+ mã vật tư): tra tồn kho, vị trí theo thời gian thực.",
+                        "Số hoá đối chiếu chấm công và sản lượng theo tổ — không còn phụ thuộc thao tác Excel thủ công của một người.",
+                        "Vận hành hạ tầng IT nhà máy: máy tính, mạng LAN, máy in, camera, máy chủ.",
+                    ]),
+                ],
+            },
+            {
+                "company": "KINH DOANH RIÊNG — MÁY TÍNH & LAPTOP",
+                "role": "Người sáng lập · Quản lý vận hành",
+                "period": "2019 – 2024",
+                "meta": "Thành lập và trực tiếp điều hành cơ sở kinh doanh, sửa chữa máy tính – laptop: nhập hàng, bán hàng và dịch vụ kỹ thuật.",
+                "groups": [],
+            },
         ],
-        "impact": [
-            ("Kế hoạch sản xuất",
-             "Mỗi xưởng giữ một bản kế hoạch riêng",
-             "Một hệ thống chung, mọi bộ phận xem cùng một số liệu"),
-            ("Theo dõi tiến độ",
-             "Muốn biết đơn hàng ở đâu phải đi hỏi từng xưởng",
-             "Nhìn màn hình biết đơn đang ở khâu nào: Kim loại → Sơn → Lắp ráp → Xuất hàng"),
-            ("Kho bán thành phẩm",
-             "Trong hơn 5.000 mã vật tư, kho BTP không tra nhanh được tồn và vị trí",
-             "Tự thiết kế hệ thống kho BTP hơn 1.100 mã: tồn, vị trí, lịch sử thao tác"),
-            ("Tài liệu nội bộ",
-             "Tài liệu nằm rải rác, khó tìm, khó kiểm soát",
-             "Một nơi lưu duy nhất, tìm theo phòng ban và thời gian, ai xem được gì rõ ràng"),
-            ("Vận hành IT",
-             "Lỗi lặp lại, mỗi lần xử lý một kiểu",
-             "Cùng một lỗi xử lý cùng một cách, người mới cũng làm được"),
+        "h_skills": "KỸ NĂNG",
+        "skills": [
+            ("Quản lý sản xuất", "Kế hoạch sản xuất · Kiểm soát tiến độ · Quản lý đơn hàng · Điều phối nhân lực · Đào tạo"),
+            ("Cải tiến & chất lượng", "Xử lý hàng lỗi · Phân tích nguyên nhân gốc · 5S · Kaizen · SOP · ISO 9001"),
+            ("Dữ liệu & công cụ", "Excel · SQL · MES · Quản lý kho · Python"),
         ],
-        "exp": {
-            "company": "WEBOX VIỆT NAM",
-            "role": "Trợ lý Giám đốc Nhà máy — phụ trách Quản lý Sản xuất",
-            "meta": "04/2024 – nay · Nhà máy ~250 nhân sự · 3 xưởng: Kim loại · Sơn · Lắp ráp · môi trường Việt – Trung",
-            "groups": [
-                ("Quản lý & điều phối", "Theo dõi ~10 đơn hàng/tháng, tương đương ~1.500 tủ thông minh, cùng các đơn gia công linh kiện cao cấp; điều phối qua cán bộ quản lý của 3 xưởng (không trực tiếp quản lý công nhân) và báo cáo Ban Giám đốc người Trung Quốc."),
-                ("Quy trình & dữ liệu", "Chuẩn hoá biểu mẫu và cách ghi số liệu; gom kế hoạch, tiến độ và tồn kho về một nguồn duy nhất, có phân quyền và nhật ký thao tác."),
-                ("Đào tạo đội ngũ", "Đào tạo công nhân mới vào việc và huấn luyện phương pháp quản lý cho cán bộ cấp trung của các xưởng."),
-                ("Công nghệ hỗ trợ", "Là người duy nhất xây dựng và vận hành các hệ thống nội bộ phục vụ quản lý; lo máy tính, mạng và server của nhà máy."),
-            ],
-        },
-        "works": [
-            ("WEBOX MES", "Hệ thống quản lý sản xuất nội bộ",
-             "Ban Giám đốc xem kế hoạch và tiến độ cả 3 xưởng trên một màn hình. Tôi tự làm toàn bộ: khảo sát, thiết kế, lập trình, triển khai, vận hành.",
-             "Node.js · SQLite · Windows Server / LAN"),
-            ("Warehouse Management", "Quản lý vật tư và tồn kho",
-             "Tôi thiết kế hệ thống kho bán thành phẩm hơn 1.100 mã: biết còn gì, ở đâu, ai vừa thao tác trước khi mua thêm hay điều chuyển.",
-             "Node.js · SQLite"),
-            ("Document Management", "Quản lý văn bản nội bộ",
-             "Tài liệu về một chỗ, tìm nhanh và kiểm soát được ai xem được gì.",
-             "Node.js · SQLite · Windows Server"),
-            ("Attendance & Data System", "Xử lý dữ liệu chấm công và sản xuất",
-             "Đối chiếu và tổng hợp không còn phụ thuộc một người làm tay.",
-             "Python · Flask · Pandas · Windows Service"),
+        "h_lang": "NGOẠI NGỮ",
+        "langs": [
+            ("Tiếng Trung — HSK 4+", "họp, xử lý tài liệu, chuyển tải yêu cầu công việc hai chiều với quản lý Trung Quốc"),
+            ("Tiếng Anh", "đọc hiểu tài liệu công việc, kỹ thuật"),
         ],
-        "think": [("Understand", "Hiểu việc thật"), ("Standardize", "Chuẩn hoá"), ("Make Data Visible", "Đưa dữ liệu ra chỗ thấy được"),
-                  ("Use Technology / AI", "Dùng công nghệ & AI"), ("Improve", "Cải thiện dần")],
-        "dir": "Giám sát Sản xuất · Phó Quản lý Sản xuất · Quản lý Sản xuất · Quản lý Vận hành (hoặc vị trí tương đương)",
-        "dir_note": "Tôi phát triển theo hướng quản lý sản xuất và vận hành. IT và dữ liệu là công cụ giúp tôi quản lý chặt hơn. Sẵn sàng làm việc tại bất kỳ khu vực nào.",
-        "labels": {"before": "Trước", "after": "Sau", "value": "Giá trị", "tech": "Công nghệ"},
+        "h_edu": "HỌC VẤN",
+        "edu": ("Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh", "Kỹ thuật Điện tử Công nghiệp", "Tốt nghiệp 09/2019"),
+        "h_other": "DỰ ÁN CÁ NHÂN",
+        "other": "Đang phát triển: tự động hoá thiết kế 3D bằng AI (AI Agent ↔ SketchUp qua MCP)",
     },
 
     "zh": {
-        "lang_tag": "中文",
-        "name": "潘廷巨",
-        "role": "生产管理 · 制造运营 · 数字化转型",
-        "objective": "求职目标：生产主管 · 生产副经理 · 生产经理 · 制造 / 运营同等职位",
-        "tagline": "连接人员、流程与技术。",
-        "summary": "自 2024 年 4 月起在约 250 人、三个车间的制造工厂担任厂长助理。日常协调各车间的计划、订单与进度，"
-                   "编制报表并直接对接中方管理层。我的不同之处：先把流程标准化，再自行开发工具，"
-                   "让生产数据透明、决策更快 —— 技术是管理手段，而非职业方向。",
-        "facts": [("~1,500", "台智能柜 / 月"), ("~10", "张订单 / 月"), ("~250", "人 · 三个车间"), ("1,100+", "半成品仓库编号（自主设计）")],
-        "h_contact": "联系方式",
-        "h_lang": "语言",
-        "h_edu": "教育背景",
-        "h_cap": "管理能力",
-        "h_summary": "简介",
-        "h_impact": "我改变了什么",
+        "file": "PhanDinhCu_CV_ProductionSupervisor_ZH.pdf",
+        "name": "潘廷巨  PHAN DINH CU",
+        "title": "生产主管 · 生产副经理",
+        "location": "工作地点不限",
+        "facts": [("2.5 年", "生产管理"), ("~1,500", "台 / 月"), ("3 个车间", "约 180 名工人"), ("HSK 4+", "中文")],
+        "h_summary": "个人简介",
+        "summary": "在中方管理的智能柜工厂负责生产计划与进度（钣金、喷涂、装配三个车间），直接向厂长汇报。此前 4.5 年自主经营"
+                   "电脑及笔记本业务。日常用中文与中方管理层沟通；自主搭建 MES，以实时数据管理生产。",
         "h_exp": "工作经历",
-        "h_work": "自建管理工具（独立完成）",
-        "h_think": "工作方式",
-        "h_dir": "职业目标",
-        "langs": [("越南语", "母语"), ("中文 — HSK 4+", "会议、文件与工作要求双向传达"), ("English", "工作 / 技术沟通")],
-        "edu": ["胡志明市师范技术大学", "工业电子技术"],
-        "caps": [
-            ("生产管理", "生产计划 · 订单管理 · 进度跟踪 · 车间干部协调 · 干部与员工培训 · 向管理层汇报"),
-            ("流程与改善", "ISO 9001 · 5S · 改善 · 流程标准化 · 表单 / SOP · 库存管控"),
-            ("数据与报表", "Excel · Pandas · SQL / SQLite · 生产报表 · 考勤核对"),
-            ("技术支撑", "MES · 仓库管理 · Windows Server · LAN / IP · 内部应用部署"),
-            ("AI 应用", "数据分析 · SOP / 文件编写 · 工具开发辅助 · 工作自动化"),
+        "jobs": [
+            {
+                "company": "WEBOX 越南有限公司",
+                "role": "厂长助理 — 主管生产管理",
+                "period": "2024.04 – 至今",
+                "meta": "智能储物柜生产及高端柜体零部件代工 · 约 250 人 · 三个车间 · 中越协作环境",
+                "groups": [
+                    ("计划与进度", [
+                        "负责按订单编制生产计划，管控钣金 → 喷涂 → 装配 → 出货四道工序进度：每月约 10 张订单、约 1,500 台智能柜，同时兼顾零部件代工订单。",
+                        "根据订单进度，通过 22 名管理干部（部门主管、组长、班长）每日分配工作并调配三个车间约 180 名工人。",
+                        "跟踪订单直至交付；向厂长及管理层提交生产报表。",
+                    ]),
+                    ("质量、流程与团队", [
+                        "出现不良品时亲自追查根本原因并在车间现场处理；超出权限时及时向厂长汇报。",
+                        "规范表单、SOP 与生产数据记录方式；在工厂 ISO 9001 体系内推行 5S、改善（Kaizen）。",
+                        "为新入职工人做上岗培训；向车间中层干部传授计划、进度跟踪、问题处理与汇报方法。",
+                        "与仓库、人事、品质、IT 协作解决跨部门问题；在中越两种语言之间传达工作要求。",
+                    ]),
+                    ("生产管理数字化", [
+                        "搭建内部 MES 系统：管理层在同一界面查看三个车间的计划与进度，不必再等次日的人工汇总报表。",
+                        "设计半成品仓库系统，覆盖 1,100 多个编号（全厂 5,000 多个物料编号）：实时查询库存与库位。",
+                        "考勤与班组产量核对数字化 —— 不再依赖某一个人手工处理 Excel。",
+                        "负责工厂 IT 基础设施：电脑、局域网、打印机、监控摄像头、服务器。",
+                    ]),
+                ],
+            },
+            {
+                "company": "自主创业 — 电脑及笔记本",
+                "role": "创始人 · 经营管理",
+                "period": "2019 – 2024",
+                "meta": "创立并直接经营电脑、笔记本销售与维修业务：负责采购、销售及技术服务。",
+                "groups": [],
+            },
         ],
-        "impact": [
-            ("生产计划", "计划分散在多个文件，各车间各持一版", "集中到一套系统，各部门读同一组数字"),
-            ("进度跟踪", "想知道订单在哪个车间只能逐个去问", "按钣金 → 喷涂 → 装配 → 出货在屏幕上直接跟踪"),
-            ("半成品仓库", "全厂 5,000 多个编号中，半成品库存与库位查不快", "自主设计半成品仓库系统，覆盖 1,100 多个编号：库存、库位、操作记录"),
-            ("内部文档", "文件分散，检索困难，权限难管控", "统一存放，按部门与时间检索，权限清晰"),
-            ("IT 运维", "重复的 IT 操作靠手工，做法不统一", "标准化工具箱 — 同类故障同一处理方式，新人可直接接手"),
+        "h_skills": "专业技能",
+        "skills": [
+            ("生产管理", "生产计划 · 进度管控 · 订单管理 · 人力调配 · 生产报表 · 培训"),
+            ("改善与质量", "不良品处理 · 根因分析 · 5S · 改善（Kaizen）· SOP · ISO 9001"),
+            ("数据与工具", "Excel · SQL · MES · 仓库管理 · Python"),
         ],
-        "exp": {
-            "company": "WEBOX 越南有限公司",
-            "role": "厂长助理 — 主管生产管理",
-            "meta": "2024年4月 – 至今 · 约 250 人工厂 · 三个车间：钣金 · 喷涂 · 装配 · 中越协作环境",
-            "groups": [
-                ("管理与协调", "跟踪每月约 10 张订单、约 1,500 台智能柜及高端零部件代工订单；通过三个车间的干部协调进度（不直接管理一线工人），并向中方管理层汇报。"),
-                ("流程与数据", "规范表单、制度与数据记录方式；把计划、进度与库存收敛到唯一数据源，并配套权限与操作日志。"),
-                ("团队培训", "为新入职工人做上岗培训，并向各车间中层干部讲授管理方法。"),
-                ("技术支撑", "作为唯一开发者建设并运维服务于管理的内部系统，并负责工厂电脑、网络与服务器。"),
-            ],
-        },
-        "works": [
-            ("WEBOX MES", "内部生产管理系统", "管理层在同一界面看到三个车间的计划与进度，无需手工汇总。", "Node.js · SQLite · Windows Server / LAN"),
-            ("Warehouse Management", "物料与库存管理", "由我设计的半成品仓库系统覆盖 1,100 多个编号：采购或调拨前先知道有什么、在哪里、谁刚操作过。", "Node.js · SQLite"),
-            ("Document Management", "内部文档管理", "文件只有一个存放处，检索快，且能管住谁能看什么。", "Node.js · SQLite · Windows Server"),
-            ("Attendance & Data System", "考勤与生产数据处理", "核对与汇总不再依赖某一个人的手工操作。", "Python · Flask · Pandas · Windows Service"),
+        "h_lang": "语言能力",
+        "langs": [
+            ("越南语", "母语"),
+            ("中文 — HSK 4+", "可参加会议、处理文件，与中方管理层双向传达工作要求"),
+            ("英语", "阅读工作及技术资料"),
         ],
-        "think": [("Understand", "理解实情"), ("Standardize", "标准化"), ("Make Data Visible", "让数据可见"),
-                  ("Use Technology / AI", "运用技术与 AI"), ("Improve", "持续改进")],
-        "dir": "生产主管 · 生产副经理 · 生产经理 · 制造 / 运营同等职位",
-        "dir_note": "我的发展方向是生产与运营管理。IT、数据与 AI 是让我管得更细、决策更快的工具，而不是职业方向。工作地点不限。",
-        "labels": {"before": "此前", "after": "此后", "value": "价值", "tech": "技术"},
+        "h_edu": "教育背景",
+        "edu": ("胡志明市师范技术大学", "工业电子技术", "2019 年 9 月毕业"),
+        "h_other": "个人项目",
+        "other": "正在开发 AI 驱动的 3D 设计自动化工具（AI Agent 通过 MCP 连接 SketchUp）。详情：phandinh.site",
     },
 
     "en": {
-        "lang_tag": "ENGLISH",
+        "file": "PhanDinhCu_CV_ProductionSupervisor_EN.pdf",
         "name": "PHAN DINH CU",
-        "role": "Production Management · Manufacturing Operations · Digital Transformation",
-        "objective": "Target roles: Production Supervisor · Deputy Production Manager · Production Manager · Operations Manager (or equivalent)",
-        "tagline": "Connecting People, Process and Technology.",
-        "summary": "Assistant to the factory manager since April 2024, in a plant of around 250 people across three workshops. I coordinate plans, "
-                   "orders and progress through workshop supervisors and report directly to Chinese-speaking management. "
-                   "What sets me apart: I standardise the process first, then build the tools that make production data transparent — "
-                   "technology is a management instrument, not my career track.",
-        "facts": [("~1,500", "smart lockers / month"), ("~10", "orders / month"), ("~250", "people · 3 workshops"), ("1,100+", "codes in warehouse I designed")],
-        "h_contact": "CONTACT",
-        "h_lang": "LANGUAGES",
-        "h_edu": "EDUCATION",
-        "h_cap": "MANAGEMENT CAPABILITIES",
+        "title": "Production Supervisor · Deputy Production Manager",
+        "location": "Open to relocation",
+        "facts": [("2.5 yrs", "in production"), ("~1,500", "units / month"), ("3 workshops", "~180 operators"), ("HSK 4+", "Chinese")],
         "h_summary": "SUMMARY",
-        "h_impact": "WHAT I CHANGED",
+        "summary": "Owns production planning and progress at a Chinese-managed smart-locker plant (metal, paint and assembly "
+                   "workshops), reporting directly to the Factory Manager. Previously ran my own computer and laptop business for "
+                   "4.5 years. Works in Chinese daily; built the plant's MES to manage production on real-time data.",
         "h_exp": "EXPERIENCE",
-        "h_work": "MANAGEMENT TOOLS — BUILT SINGLE-HANDEDLY",
-        "h_think": "HOW I WORK",
-        "h_dir": "TARGET ROLES",
-        "langs": [("Vietnamese", "Native"), ("Chinese — HSK 4+", "Meetings, documents, two-way interpreting"), ("English", "Work / technical")],
-        "edu": ["Ho Chi Minh City University of Technology and Education", "Industrial Electronics Engineering"],
-        "caps": [
-            ("Production management", "Production planning · Order management · Progress tracking · Coordination through supervisors · Training · Board reporting"),
-            ("Process & improvement", "ISO 9001 · 5S · Kaizen · Process standardisation · Forms / SOP · Stock control"),
-            ("Data & reporting", "Excel · Pandas · SQL / SQLite · Production reporting · Attendance reconciliation"),
-            ("Supporting technology", "MES · Warehouse control · Windows Server · LAN / IP · Internal app deployment"),
-            ("AI at work", "Data analysis · SOP / documents · Tool development support · Automation"),
+        "jobs": [
+            {
+                "company": "WEBOX VIETNAM",
+                "role": "Assistant to the Factory Manager — Production Management",
+                "period": "04/2024 – present",
+                "meta": "Smart lockers and OEM cabinet components · ~250 people · 3 workshops · Vietnamese–Chinese plant",
+                "groups": [
+                    ("Planning & progress", [
+                        "Own order-based production planning and progress across metal → paint → assembly → shipping: ~10 orders "
+                        "and ~1,500 smart lockers a month, plus OEM component orders.",
+                        "Allocate work and reassign manpower daily across three workshops (~180 operators) to match order progress, through 22 supervisors and team leaders.",
+                        "Follow orders through to delivery; report production status to the Factory Manager and management.",
+                    ]),
+                    ("Quality, process & people", [
+                        "Personally trace the root cause of defects and fix them on the shop floor; escalate when beyond my authority.",
+                        "Standardised forms, SOPs and production data recording; apply 5S and Kaizen within the plant's ISO 9001 system.",
+                        "Train new operators; coach mid-level supervisors on planning, progress tracking, issue handling and reporting.",
+                        "Resolve cross-functional issues with Warehouse, HR, Quality and IT; relay requirements in Vietnamese and Chinese.",
+                    ]),
+                    ("Digitalising production management", [
+                        "Built the internal MES: plan and progress of all three workshops on one screen, not a day-late manual report.",
+                        "Designed the semi-finished warehouse system for 1,100+ codes (of 5,000+): real-time stock and location.",
+                        "Digitalised attendance and output reconciliation by team — no more one-person manual Excel work.",
+                        "Run the plant's IT infrastructure: PCs, LAN, printers, cameras, server.",
+                    ]),
+                ],
+            },
+            {
+                "company": "OWN BUSINESS — COMPUTERS & LAPTOPS",
+                "role": "Founder · Operations",
+                "period": "2019 – 2024",
+                "meta": "Founded and ran a computer and laptop sales and repair business: purchasing, sales and technical service.",
+                "groups": [],
+            },
         ],
-        "impact": [
-            ("Production planning", "Plans scattered across files, one version per workshop", "One system — every department reads the same numbers"),
-            ("Progress tracking", "Finding an order meant asking each workshop", "Tracked on screen along metal → paint → assembly → shipping"),
-            ("Semi-finished stock", "Among 5,000+ material codes, stock and location were slow to find", "Designed the warehouse system for 1,100+ codes: stock, location, history"),
-            ("Internal documents", "Scattered, hard to search, access hard to control", "One place, searchable by department and period, clear permissions"),
-            ("IT operations", "Repetitive IT tasks by hand, differently each time", "Standardised toolkit — same fault, same fix, anyone can pick it up"),
+        "h_skills": "SKILLS",
+        "skills": [
+            ("Production management", "Production planning · Progress control · Order management · Manpower allocation · Training"),
+            ("Improvement & quality", "Defect handling · Root-cause analysis · 5S · Kaizen · SOP · ISO 9001"),
+            ("Data & tools", "Excel · SQL · MES · Warehouse control · Python"),
         ],
-        "exp": {
-            "company": "WEBOX VIETNAM",
-            "role": "Assistant to the Factory Manager — Production Management",
-            "meta": "04/2024 – present · Plant of ~250 people · three workshops: metal · paint · assembly · Vietnamese – Chinese environment",
-            "groups": [
-                ("Management & coordination", "Tracking ~10 orders and ~1,500 smart lockers a month plus OEM component orders; coordinating through the supervisors of three workshops — no direct line management of operators — and reporting to Chinese-speaking management."),
-                ("Process & data", "Standardising forms, rules and how data is recorded; consolidating plans, progress and stock into a single source with permissions and audit logs."),
-                ("Team training", "Onboarding new operators and coaching workshop supervisors on management method."),
-                ("Supporting technology", "Sole builder and operator of the internal systems serving management; running plant computers, network and server."),
-            ],
-        },
-        "works": [
-            ("WEBOX MES", "Internal manufacturing management system", "Management sees all three workshops on one screen. Sole builder: analysis, design, development, deployment, operation.", "Node.js · SQLite · Windows Server / LAN"),
-            ("Warehouse Management", "Material and stock control", "A warehouse system I designed for 1,100+ semi-finished codes: what is on hand, where it sits and who touched it.", "Node.js · SQLite"),
-            ("Document Management", "Internal document control", "One place for documents, quick to search, with control over who sees what.", "Node.js · SQLite · Windows Server"),
-            ("Attendance & Data System", "Attendance and production data processing", "Reconciliation and consolidation no longer depend on one person working by hand.", "Python · Flask · Pandas · Windows Service"),
+        "h_lang": "LANGUAGES",
+        "langs": [
+            ("Vietnamese", "native"),
+            ("Chinese — HSK 4+", "meetings, documents and two-way interpreting with Chinese management"),
+            ("English", "work and technical reading"),
         ],
-        "think": [("Understand", "the real work"), ("Standardize", "the process"), ("Make Data Visible", "to everyone"),
-                  ("Use Technology / AI", "where it repeats"), ("Improve", "continuously")],
-        "dir": "Production Supervisor · Deputy Production Manager · Production Manager · Operations Manager (or equivalent)",
-        "dir_note": "My track is production and operations management. IT, data and AI are the tools that let me manage tighter and decide faster. Open to relocation — no location preference.",
-        "labels": {"before": "Before", "after": "After", "value": "Value", "tech": "Tech"},
+        "h_edu": "EDUCATION",
+        "edu": ("Ho Chi Minh City University of Technology and Education", "Industrial Electronics Engineering", "Graduated 09/2019"),
+        "h_other": "PERSONAL PROJECT",
+        "other": "In progress: AI-driven 3D design automation (AI agent ↔ SketchUp via MCP) — phandinh.site",
     },
 }

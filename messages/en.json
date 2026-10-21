@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Phan Dinh Cu — Production Management · Manufacturing Operations · Digital Transformation",
-    "description": "Production management professional with hands-on manufacturing experience and practical expertise in MES and manufacturing digital transformation.",
-    "ogAlt": "Phan Dinh Cu professional profile — Production Management"
+    "title": "Phan Dinh Cu — Production Management · Digital Transformation · AI & Automation",
+    "description": "Portfolio of Phan Dinh Cu: production management, an MES platform and IT infrastructure running in a real factory, plus AI + MCP + SketchUp automation projects in progress.",
+    "ogAlt": "Phan Dinh Cu portfolio — Production Management, Digital Transformation, AI & Automation"
   },
   "nav": {
     "capabilities": "Capabilities",
@@ -18,7 +18,7 @@
   "titleBlock": {
     "owner": "Phan Dinh Cu",
     "scale": "SCALE 1:1",
-    "revision": "REV 2026.08"
+    "revision": "REV 2026.10"
   },
   "common": {
     "placeholder": "No data yet"
@@ -28,10 +28,10 @@
     "sectionName": "Positioning",
     "lines": [
       "Production Management",
-      "Manufacturing Operations",
-      "Digital Transformation"
+      "Digital Transformation · MES",
+      "AI & Automation"
     ],
-    "positioning": "Production management professional with hands-on manufacturing experience and practical expertise in MES and manufacturing digital transformation.",
+    "positioning": "Production manager with hands-on factory experience — owns planning and progress for three workshops (~180 operators), built the plant’s MES and runs its IT infrastructure; now developing AI design automation.",
     "cta": {
       "experience": "View experience",
       "projects": "Featured projects",
@@ -72,7 +72,7 @@
     "sectionCode": "SEC 02",
     "sectionName": "Capabilities",
     "title": "Core capabilities",
-    "lead": "Four capabilities I use every day to keep the plant running to plan.",
+    "lead": "Six capabilities I use to keep the plant running to plan and to bring technology into real work.",
     "items": [
       {
         "no": "01",
@@ -136,6 +136,19 @@
           "Work standardization",
           "On-the-floor mentoring"
         ]
+      },
+      {
+        "no": "06",
+        "name": "IT, AI & Automation",
+        "desc": "Running the plant’s IT infrastructure, standardising software architecture and testing before release; now developing a way to connect AI agents to SketchUp through MCP to cut repetitive work.",
+        "tags": [
+          "AI Agent",
+          "MCP",
+          "SketchUp Ruby API",
+          "Code audit",
+          "Functional testing",
+          "LAN infrastructure"
+        ]
       }
     ]
   },
@@ -155,9 +168,10 @@
         "bullets": [
           "Building order-based production plans and controlling progress across metal → paint → assembly → shipping.",
           "Tracking a flow of around 10 orders per month, roughly 1,500 smart lockers, alongside OEM orders for premium cabinet components on the domestic market.",
-          "Reporting directly to the Plant Director and working through the supervisors of three workshops to set daily assignments; resolving issues and escalating when beyond my authority.",
+          "Reporting directly to the Plant Director; allocating work and reassigning manpower daily across the three workshops to match order progress; personally tracing and fixing the root cause of defects on the floor.",
           "Designed the semi-finished goods warehouse system covering more than 1,100 codes — part of the plant’s 5,000+ material codes.",
           "Built and operate the internal management systems (MES, warehouse, documents) that serve production management directly — from business analysis to deployment, without a separate IT team.",
+          "Operating and troubleshooting the plant’s computers, LAN, printers, cameras and shared systems.",
           "Following orders through to delivery and reporting production status to management.",
           "Working directly with Warehouse, HR, Quality and IT to close cross-functional problems.",
           "Training new operators and coaching workshop supervisors on management method."
@@ -165,56 +179,136 @@
       }
     ],
     "sinceLabel": "Period",
-    "scopeNote": "Working through the supervisors of the metal, paint and assembly workshops — no direct line management of operators."
+    "scopeNote": "Allocating work for ~180 operators across the metal, paint and assembly workshops through 22 supervisors and team leaders."
   },
   "projects": {
     "sectionCode": "SEC 04",
     "sectionName": "Projects",
     "title": "Featured projects",
-    "lead": "Systems in real use on the factory floor. Shown by management value; switch to Technical for deployment detail.",
-    "view": {
-      "business": "Management",
-      "technical": "Technical",
-      "label": "View"
+    "lead": "Systems running on a real factory floor — MES, production data digitalization, IT infrastructure — plus AI and automation projects in development. Every project states its status — ideas and plans are never presented as finished work.",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "planned": "Planned"
+    },
+    "statusNote": {
+      "completed": "Deployed and in real use.",
+      "inProgress": "Being developed or researched — results are not final.",
+      "planned": "Research and direction only — not yet built."
+    },
+    "filter": {
+      "label": "Filter by status",
+      "all": "All",
+      "showing": "Showing {count} projects"
     },
     "labels": {
-      "problem": "Problem",
-      "solution": "Solution",
-      "value": "Management value",
+      "goal": "Goal",
+      "highlights": {
+        "completed": "What was built",
+        "inProgress": "Work in progress",
+        "planned": "Planned scope"
+      },
+      "result": {
+        "completed": "Result",
+        "inProgress": "Current status",
+        "planned": "Expected outcome"
+      },
+      "next": "Next direction",
       "scope": "Scope",
-      "tech": "Technology",
-      "caseStudy": "View detail",
+      "tech": "Tech & methods",
+      "caseStudy": "View details",
       "noImage": "No screenshot yet",
+      "diagram": "Process diagram — screenshots to be added",
+      "featured": "Featured project",
       "confidential": "Data in the screenshots is masked in line with company confidentiality rules.",
       "role": "Role"
     },
     "items": {
+      "sketchup-mcp": {
+        "title": "AI + MCP + SketchUp Automation",
+        "subtitle": "3D design automation: an AI agent driving SketchUp through MCP",
+        "goal": "Cut manual modelling work, save time and standardise the design process across many house types.",
+        "highlights": [
+          "Developing the architecture that links AI Agent → MCP Server → SketchUp Extension → SketchUp Ruby API.",
+          "Building reusable design rules to support designing many house types.",
+          "Automating modelling steps, design-data processing and 3D view capture."
+        ],
+        "result": "In development. No measured time savings yet — figures will be added once results are verified.",
+        "role": "Integration architecture, design rules and connector development."
+      },
       "mes": {
         "title": "Manufacturing MES Platform",
         "subtitle": "Internal production management platform",
-        "problem": "Plans, progress, stock and documents lived in scattered files. Locating an order meant waiting for a hand-consolidated report.",
-        "solution": "An MES platform on the internal network covering the whole flow from order intake to shipping, with permissions and audit logs. Within it I designed the semi-finished goods warehouse module covering 1,100+ codes.",
-        "value": "Management sees plan and progress for all three workshops on one screen (instead of waiting a day for reports); the semi-finished goods warehouse gives real-time stock and location instead of digging through Excel.",
-        "message": "Technology is used to solve manufacturing problems.",
+        "goal": "Bring plans, progress, stock and documents scattered across many files into one platform, so management can locate any order without waiting for a hand-consolidated report.",
+        "highlights": [
+          "An MES platform on the internal network covering the whole flow from order intake to shipping.",
+          "User permissions and audit logs for every function.",
+          "Designed the semi-finished goods warehouse module covering 1,100+ codes."
+        ],
+        "result": "Management sees plan and progress for all three workshops on one screen (instead of waiting a day for reports); the semi-finished goods warehouse gives real-time stock and location instead of digging through Excel.",
         "role": "Sole builder — business analysis, design, development, deployment and operation."
       },
       "digital": {
         "title": "Production Digitalization",
         "subtitle": "Production and attendance data digitalized",
-        "problem": "Output and attendance data were processed by hand in Excel, dependent on one person and prone to mismatches between departments.",
-        "solution": "A digital flow: Excel intake, processing against shift and exception settings, report export and a per-team analysis screen.",
-        "value": "Reconciliation no longer depends on one person working by hand; output by team and by worker is visible immediately.",
-        "message": "Production data has to be visible before it can be managed.",
+        "goal": "Remove the dependence on one person’s manual Excel work and stop output and attendance figures drifting between departments.",
+        "highlights": [
+          "Excel intake processed against shift and exception settings.",
+          "Attendance reconciliation and output totals by team and by worker.",
+          "Report export and a per-team analysis screen."
+        ],
+        "result": "Reconciliation no longer depends on one person working by hand; output by team and by worker is visible immediately.",
         "role": "Sole builder — from business rules to an application running on the LAN."
       },
       "itsys": {
-        "title": "Factory IT & Business Systems",
-        "subtitle": "Plant infrastructure and business systems",
-        "problem": "Internal systems need a stable server, network and incident routine; repetitive IT tasks were done by hand, differently every time.",
-        "solution": "Administering the server and internal network for all business systems; standardising common IT actions into a bilingual VN–CN toolkit.",
-        "value": "Shared systems stay up; the same incident is handled the same way and new staff can take it over.",
-        "message": "Stable infrastructure is what digitalization stands on.",
-        "role": "Sole administrator of the server, internal network and troubleshooting toolkit."
+        "title": "IT Infrastructure & Production Automation",
+        "subtitle": "Plant IT, shared systems and automated routine tasks",
+        "goal": "Keep the server, network and shared systems stable, and handle the same incident the same way every time.",
+        "highlights": [
+          "Operating and troubleshooting PCs, LAN, printers, cameras and shared systems.",
+          "Administering the server and internal network behind the business systems; standardising common IT actions into a bilingual VN–CN toolkit.",
+          "Combining IT know-how with management, data and production processes."
+        ],
+        "result": "Shared systems stay up; the same incident is handled the same way and new staff can take it over.",
+        "next": "Applying AI and automation to raise work efficiency.",
+        "role": "Sole administrator of the server, internal network, shared devices and troubleshooting toolkit."
+      },
+      "software-qa": {
+        "title": "Software Architecture & Quality Assurance",
+        "subtitle": "Standard architecture, code audits and testing before release",
+        "goal": "Keep in-house systems maintainable and extensible, and avoid regressions when changing or adding features.",
+        "highlights": [
+          "Standardising module architecture, terminology and the development process.",
+          "Auditing source code before changing it or adding features.",
+          "Building reusable, extensible rules.",
+          "Functional testing, quality review and reporting on each deployment."
+        ],
+        "result": "Applied while developing the projects above. No aggregated quality metrics yet — to be added.",
+        "role": "Standards, code audits, testing and reporting."
+      },
+      "ai-architecture": {
+        "title": "AI-Assisted Architectural Design",
+        "subtitle": "AI for modern housing design — single-storey houses with Japanese-style roofs",
+        "goal": "Shorten the path from a design option to interior/exterior views and architectural video, with consistent materials, colours and lighting across options.",
+        "highlights": [
+          "Researching AI for modern housing design, especially single-storey houses with Japanese-style roofs.",
+          "Standardising materials, colours, lighting and interior/exterior view requirements.",
+          "Building a workflow for rendering, architectural video and 3D view management."
+        ],
+        "result": "Research and workflow-building in progress — results will be added when ready.",
+        "role": "Research, design-requirement standards and workflow building."
+      },
+      "web-3d": {
+        "title": "Browser-Based 3D Model Sharing",
+        "subtitle": "Share 3D models through a browser link — no SketchUp install needed",
+        "goal": "Let anyone open a 3D model from a single link — no SketchUp install, view-only access, low running cost.",
+        "highlights": [
+          "Researching ways to share 3D models through a browser link.",
+          "Planning to use GLB so viewers can orbit the model, look inside spaces and inspect materials.",
+          "Prioritising no SketchUp install, view-only (no editing) access and low deployment cost."
+        ],
+        "result": "Not built yet — options are being researched. Expected: send one link and the 3D model opens, no software to install.",
+        "role": "Research and option selection."
       }
     }
   },
@@ -238,7 +332,19 @@
       },
       {
         "name": "Manufacturing Tech",
-        "items": "MES · Internal LAN administration · Web application deployment"
+        "items": "MES · Windows Server · Internal LAN · Printers & cameras · Web application deployment"
+      },
+      {
+        "name": "AI & Automation",
+        "items": "AI Agent · MCP Server · SketchUp Extension · SketchUp Ruby API · Automating repetitive work"
+      },
+      {
+        "name": "Software architecture & QA",
+        "items": "Module architecture · Code audit · Reusable rules · Functional testing · Deployment reporting"
+      },
+      {
+        "name": "3D & Design",
+        "items": "SketchUp · GLB · AI-assisted architectural rendering and video (research)"
       }
     ],
     "education": {
@@ -257,13 +363,12 @@
     "sectionCode": "SEC 06",
     "sectionName": "Contact",
     "title": "Ready for the next production management role.",
-    "lead": "If your plant needs a manager who understands both the floor and the systems behind it, get in touch directly.",
+    "lead": "If your organisation needs someone who understands the floor, the systems behind it and how to bring AI and automation into real work, get in touch directly.",
     "targetLabel": "Target roles",
     "targets": [
       "Production Supervisor",
-      "Deputy Production Manager",
-      "Production Manager",
-      "Operations Manager"
+      "Workshop Supervisor",
+      "Deputy Production Manager"
     ],
     "labels": {
       "email": "Email",
@@ -277,30 +382,12 @@
     "targetNote": "or equivalent"
   },
   "caseStudy": {
-    "steps": [
-      "Context",
-      "Operational problem",
-      "Approach",
-      "Solution",
-      "Technology",
-      "Management value"
-    ],
-    "pending": "Nothing written here yet — to be added",
-    "pendingResult": "No measured figures yet — to be added",
     "back": "Back to home",
     "allProjects": "All projects",
     "screenshots": "Screenshots",
-    "core": "System scope",
+    "core": "Scope",
     "next": "Next project",
-    "value": "Management value",
-    "stepNames": [
-      "Context",
-      "Operational problem",
-      "Approach",
-      "Solution",
-      "Technology",
-      "Management value"
-    ]
+    "contents": "Contents"
   },
   "notFound": {
     "title": "Page not found",

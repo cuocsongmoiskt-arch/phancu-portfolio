@@ -18,8 +18,14 @@
     --accent-600: #3f6a5b;
     --accent-050: #e3ede7;
     --highlight: #b08a55;
-    --font-display: var(--font-archivo), system-ui, sans-serif;
-    --font-body: var(--font-plex-sans), system-ui, sans-serif;
+    --progress-600: #86622b;
+    --progress-050: #faf3e7;
+    /* Bản zh chỉ nạp Noto Sans SC, không có biến Archivo/Plex. var() thiếu biến mà không có
+       giá trị dự phòng sẽ làm hỏng cả khai báo (rơi về font serif) — nên lồng fallback. */
+    --font-display:
+      var(--font-archivo, var(--font-noto-sans-sc, system-ui)), sans-serif;
+    --font-body:
+      var(--font-plex-sans, var(--font-noto-sans-sc, system-ui)), sans-serif;
     --font-mono: var(--font-plex-mono), ui-monospace, monospace;
     --title-block-h: 24px;
 
@@ -501,19 +507,31 @@ html[lang="zh"] li {
 
 /* ================= Lớp thị giác nâng cao ================= */
 
-/* Hero nền tối full-bleed, có lưới bản vẽ và quầng sáng rất nhẹ */
-.hero-dark {
+/* Hero nền sáng full-bleed: trắng chuyển dần sang nền trang, lưới bản vẽ rất mờ
+   và quầng màu nhẹ ở góc — sáng, sạch, không phô */
+.hero-light {
   position: relative;
-  background: linear-gradient(155deg, #2f4657 0%, #22333f 55%, #1c2a34 100%);
-  color: #fff;
+  background:
+    radial-gradient(
+      70% 60% at 88% 0%,
+      rgba(63, 106, 91, 0.09),
+      transparent 62%
+    ),
+    radial-gradient(
+      50% 40% at 0% 100%,
+      rgba(176, 138, 85, 0.08),
+      transparent 70%
+    ),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  color: var(--ink-900);
 }
-.hero-dark::before {
+.hero-light::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(30, 42, 51, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 42, 51, 0.045) 1px, transparent 1px);
   background-size: 72px 72px;
   -webkit-mask-image: radial-gradient(
     120% 90% at 12% 0%,
@@ -521,20 +539,6 @@ html[lang="zh"] li {
     transparent 78%
   );
   mask-image: radial-gradient(120% 90% at 12% 0%, #000 20%, transparent 78%);
-  pointer-events: none;
-}
-.hero-dark::after {
-  content: "";
-  position: absolute;
-  right: -12%;
-  top: -28%;
-  width: 60%;
-  height: 120%;
-  background: radial-gradient(
-    circle at center,
-    rgba(176, 138, 85, 0.16),
-    transparent 62%
-  );
   pointer-events: none;
 }
 
@@ -723,4 +727,72 @@ html[lang="zh"] li {
 
 .custom-cursor.hidden-cursor {
   opacity: 0;
+}
+
+/* ---------- Trạng thái dự án ---------- */
+
+/* Chấm trạng thái: đặc = Hoàn thành, nhịp = Đang thực hiện, rỗng = Kế hoạch */
+.status-dot {
+  position: relative;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  flex: none;
+}
+.status-dot--completed {
+  background: var(--accent-600);
+}
+.status-dot--inProgress {
+  background: var(--progress-600);
+}
+.status-dot--inProgress::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 999px;
+  border: 1px solid var(--progress-600);
+  opacity: 0;
+  animation: pulse-ring 2.8s ease-out infinite;
+}
+.status-dot--planned {
+  border: 1.5px solid var(--ink-500);
+  background: transparent;
+}
+
+/* Khối kết quả: màu nền theo trạng thái để không nhầm "kỳ vọng" thành "đã đạt" */
+.result-box {
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.result-box--completed {
+  background: var(--accent-050);
+}
+.result-box--completed .label-mono {
+  color: var(--accent-600);
+}
+.result-box--inProgress {
+  background: var(--progress-050);
+}
+.result-box--inProgress .label-mono {
+  color: var(--progress-600);
+}
+.result-box--planned {
+  border: 1px dashed rgba(94, 107, 117, 0.45);
+  background: var(--surface);
+}
+
+/* Nền sơ đồ quy trình khi chưa có ảnh thực tế */
+.flow-panel {
+  background-color: var(--bg-alt);
+  background-image:
+    linear-gradient(to right, rgba(30, 42, 51, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 42, 51, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-dot--inProgress::after {
+    animation: none;
+  }
 }

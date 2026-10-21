@@ -10,6 +10,8 @@ const config: Config = {
         surface: { DEFAULT: "#FFFFFF", sub: "#F7F7F5" },
         line: "#E4E3DE",
         accent: { 600: "#3F6A5B", 50: "#E3EDE7" },
+        // Trạng thái "Đang thực hiện" — tông đồng hồ cát, tách khỏi olive của "Hoàn thành"
+        progress: { 600: "#86622B", 50: "#FAF3E7" },
         highlight: "#B08A55",
         band: { DEFAULT: "#2C4150", deep: "#22333F" },
       },

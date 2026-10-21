@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import type { AppLocale } from "@/i18n/routing";
-import { profile, nameByLocale } from "@/content/profile";
+import { cvByLocale, nameByLocale } from "@/content/profile";
 
 const NAV = [
   { id: "capabilities", href: "#capabilities" },
@@ -106,9 +106,9 @@ export default function SiteHeader() {
     <header
       className={`header-shrink fixed inset-x-0 top-0 z-40 border-b ${
         scrolled
-          ? "border-line bg-white/90 shadow-soft backdrop-blur text-ink-900"
-          : "border-transparent bg-transparent text-white"
-      }`}
+          ? "border-line bg-white/85 shadow-soft backdrop-blur-xl"
+          : "border-transparent bg-transparent"
+      } text-ink-900`}
     >
       <div
         className={`container-page flex items-center justify-between transition-all duration-300 ${scrolled ? "h-14 md:h-16" : "h-16 md:h-24"}`}
@@ -124,21 +124,16 @@ export default function SiteHeader() {
               href={item.href}
               aria-current={active === item.id ? "true" : undefined}
               className={`nav-link text-[14px] transition-colors ${
-                scrolled
-                  ? active === item.id
-                    ? "text-accent-600"
-                    : "text-ink-500 hover:text-accent-600"
-                  : "text-white/75 hover:text-white"
+                active === item.id
+                  ? "text-accent-600"
+                  : "text-ink-500 hover:text-ink-900"
               }`}
             >
               {t(item.id)}
             </a>
           ))}
 
-          <span
-            className={`h-4 w-px ${scrolled ? "bg-line" : "bg-white/25"}`}
-            aria-hidden
-          />
+          <span className="h-4 w-px bg-line" aria-hidden />
 
           <div
             className="flex items-center gap-1"
@@ -153,12 +148,8 @@ export default function SiteHeader() {
                 aria-current={locale === l.code ? "true" : undefined}
                 className={`label-mono rounded px-2 py-1 transition-colors ${
                   locale === l.code
-                    ? scrolled
-                      ? "bg-accent-50 text-accent-600"
-                      : "bg-white/15 text-white"
-                    : scrolled
-                      ? "hover:text-ink-900"
-                      : "text-white/60 hover:text-white"
+                    ? "bg-accent-50 text-accent-600"
+                    : "hover:text-ink-900"
                 }`}
               >
                 {l.label}
@@ -167,13 +158,10 @@ export default function SiteHeader() {
           </div>
 
           <a
-            href={profile.cvUrl || "#contact"}
-            {...(profile.cvUrl ? { target: "_blank", rel: "noopener" } : {})}
-            className={`rounded-lg border px-3 py-2 text-[14px] transition-colors ${
-              scrolled
-                ? "border-line hover:border-ink-900"
-                : "border-white/30 text-white hover:border-white"
-            }`}
+            href={cvByLocale[locale]}
+            target="_blank"
+            rel="noopener"
+            className="rounded-full border border-line px-4 py-2 text-[14px] transition-colors hover:border-ink-900 hover:bg-ink-900 hover:text-white"
           >
             {t("cv")} ↗
           </a>
@@ -190,14 +178,14 @@ export default function SiteHeader() {
         >
           <span className="relative block h-[10px] w-5" aria-hidden>
             <span
-              className={`absolute left-0 h-px w-5 transition-transform duration-200 ${
-                scrolled || open ? "bg-ink-900" : "bg-white"
-              } ${open ? "top-[5px] rotate-45" : "top-0"}`}
+              className={`absolute left-0 h-px w-5 bg-ink-900 transition-transform duration-200 ${
+                open ? "top-[5px] rotate-45" : "top-0"
+              }`}
             />
             <span
-              className={`absolute left-0 h-px w-5 transition-transform duration-200 ${
-                scrolled || open ? "bg-ink-900" : "bg-white"
-              } ${open ? "top-[5px] -rotate-45" : "top-[10px]"}`}
+              className={`absolute left-0 h-px w-5 bg-ink-900 transition-transform duration-200 ${
+                open ? "top-[5px] -rotate-45" : "top-[10px]"
+              }`}
             />
           </span>
         </button>

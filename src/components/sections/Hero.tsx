@@ -5,7 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 import Parallax from "@/components/ui/Parallax";
 import CountUp from "@/components/ui/CountUp";
 import { Link } from "@/i18n/routing";
-import { profile, nameByLocale } from "@/content/profile";
+import { profile, nameByLocale, cvByLocale } from "@/content/profile";
 import type { AppLocale } from "@/i18n/routing";
 
 type Snap = { value: string; label: string };
@@ -28,16 +28,16 @@ export default function Hero() {
       data-section-name={t("sectionName")}
       className="bg-surface"
     >
-      {/* ---------- Khối tối ---------- */}
-      <div className="hero-dark overflow-hidden pb-24 pt-28 md:pb-32 md:pt-40">
+      {/* ---------- Khối mở đầu, nền sáng ---------- */}
+      <div className="hero-light overflow-hidden pb-24 pt-28 md:pb-32 md:pt-40">
         <div className="container-page relative grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <Reveal>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="label-mono rounded-lg border border-white/20 px-3 py-1.5 text-white/70">
+                <span className="label-mono rounded-full border border-line bg-surface px-3 py-1.5">
                   {t("sectionCode")}
                 </span>
-                <span className="label-mono inline-flex items-center gap-2 rounded-lg border border-highlight/40 bg-white/5 px-3 py-1.5 text-highlight">
+                <span className="label-mono inline-flex items-center gap-2 rounded-full border border-accent-600/25 bg-accent-50 px-3 py-1.5 text-accent-600">
                   <span className="pulse-dot" aria-hidden />
                   {t("available")}
                 </span>
@@ -45,28 +45,28 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={70}>
-              <h1 className="display t-hero mt-8 text-white">{name}</h1>
+              <h1 className="display t-hero mt-8 text-ink-900">{name}</h1>
             </Reveal>
 
             {/* Ba dòng định vị, đánh số như mục lục */}
             <Reveal delay={140}>
-              <ul className="mt-9 max-w-[34rem] border-t border-white/15">
+              <ul className="mt-9 max-w-[34rem] border-t border-line">
                 {lines.map((line, i) => (
                   <li
                     key={line}
-                    className="flex items-baseline gap-5 border-b border-white/15 py-3"
+                    className="flex items-baseline gap-5 border-b border-line py-3"
                   >
-                    <span className="label-mono text-highlight">
+                    <span className="label-mono text-accent-600">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="display t-h3 text-white">{line}</span>
+                    <span className="display t-h3 text-ink-900">{line}</span>
                   </li>
                 ))}
               </ul>
             </Reveal>
 
             <Reveal delay={210}>
-              <p className="t-lead mt-8 max-w-[56ch] text-white/65">
+              <p className="t-lead mt-8 max-w-[56ch] text-ink-500">
                 {t("positioning")}
               </p>
             </Reveal>
@@ -74,16 +74,16 @@ export default function Hero() {
             {/* Vị trí hướng tới — đưa lên đây để nhà tuyển dụng thấy ngay không cần lướt hết trang */}
             <Reveal delay={260}>
               <div className="mt-7">
-                <p className="label-mono text-white/50">
+                <p className="label-mono">
                   {tc("targetLabel")}{" "}
-                  <span className="normal-case tracking-normal text-white/35">
+                  <span className="normal-case tracking-normal text-ink-500/80">
                     ({tc("targetNote")})
                   </span>
                 </p>
                 <ul className="mt-2.5 flex flex-wrap gap-2">
                   {targets.map((role) => (
                     <li key={role}>
-                      <span className="label-mono rounded-lg border border-white/20 px-3 py-1.5 text-white">
+                      <span className="label-mono rounded-full border border-line bg-surface px-3 py-1.5 text-ink-900">
                         {role}
                       </span>
                     </li>
@@ -94,17 +94,13 @@ export default function Hero() {
 
             <Reveal delay={320}>
               <div className="mt-9 flex flex-wrap gap-3">
-                <Button href="#experience" variant="light">
-                  {cta.experience}
-                </Button>
-                <Button href="#projects" variant="ghost">
+                <Button href="#projects" variant="solid">
                   {cta.projects}
                 </Button>
-                <Button
-                  href={profile.cvUrl}
-                  variant="ghost"
-                  disabled={!profile.cvUrl}
-                >
+                <Button href="#experience" variant="outline">
+                  {cta.experience}
+                </Button>
+                <Button href={cvByLocale[locale]} variant="outline">
                   {cta.cv} ↓
                 </Button>
               </div>
@@ -112,9 +108,9 @@ export default function Hero() {
               <Link
                 href="/"
                 locale={altLocale}
-                className="group mt-7 inline-flex items-center gap-2.5 text-[15px] text-white/60 transition-colors hover:text-highlight"
+                className="group mt-7 inline-flex items-center gap-2.5 text-[15px] text-ink-500 transition-colors hover:text-accent-600"
               >
-                <span className="label-mono rounded border border-white/25 px-2 py-1">
+                <span className="label-mono rounded border border-line px-2 py-1">
                   {altLocale.toUpperCase()}
                 </span>
                 {t("zhCta")}
@@ -136,7 +132,7 @@ export default function Hero() {
                 className="relative mx-auto max-w-[330px] md:ml-auto md:mr-0"
               >
                 <figure className="relative">
-                  <div className="corner-ticks overflow-hidden rounded-xl border border-white/15 shadow-lifted">
+                  <div className="corner-ticks overflow-hidden rounded-2xl border border-line shadow-lifted">
                     <Image
                       src="/portrait.webp"
                       alt={name}

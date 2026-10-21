@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-/** Danh mục 6 bước, bám dính bên trái trên desktop; ẩn trên mobile. */
+/** Danh mục các bước, bám dính bên trái trên desktop; ẩn trên mobile. */
 export default function CaseStudyNav({
   steps,
-  names,
+  label,
 }: {
   steps: string[];
-  names: string[];
+  label: string;
 }) {
   const [active, setActive] = useState(1);
 
@@ -35,7 +35,7 @@ export default function CaseStudyNav({
   }, [steps]);
 
   return (
-    <nav className="hidden md:col-span-3 md:block" aria-label="Case study">
+    <nav className="hidden md:col-span-3 md:block" aria-label={label}>
       <ol className="sticky top-28 space-y-1">
         {steps.map((step, i) => {
           const on = active === i + 1;
@@ -56,9 +56,7 @@ export default function CaseStudyNav({
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="text-[15px]">
-                  {names[i] !== step ? `${step} · ${names[i]}` : step}
-                </span>
+                <span className="text-[15px]">{step}</span>
               </a>
             </li>
           );
