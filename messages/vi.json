@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Phan Đình Cự — Quản lý Sản xuất · Vận hành Nhà máy · MES",
-    "description": "Quản lý sản xuất với kinh nghiệm thực tế tại nhà máy, chuyên sâu về MES và chuyển đổi số sản xuất.",
-    "ogAlt": "Hồ sơ nghề nghiệp Phan Đình Cự — Quản lý Sản xuất"
+    "title": "Phan Đình Cự — Quản lý Sản xuất · Chuyển đổi số · AI & Tự động hoá",
+    "description": "Portfolio của Phan Đình Cự: quản lý sản xuất, nền tảng MES và hạ tầng IT đang vận hành thực tế tại nhà máy; các dự án AI + MCP + SketchUp và tự động hoá đang phát triển.",
+    "ogAlt": "Portfolio Phan Đình Cự — Quản lý Sản xuất, Chuyển đổi số, AI & Tự động hoá"
   },
   "nav": {
     "capabilities": "Năng lực",
@@ -18,7 +18,7 @@
   "titleBlock": {
     "owner": "Phan Đình Cự",
     "scale": "SCALE 1:1",
-    "revision": "REV 2026.08"
+    "revision": "REV 2026.10"
   },
   "common": {
     "placeholder": "Chưa có dữ liệu"
@@ -28,10 +28,10 @@
     "sectionName": "Định vị",
     "lines": [
       "Production Management",
-      "Manufacturing Operations",
-      "Digital Transformation"
+      "Digital Transformation · MES",
+      "AI & Automation"
     ],
-    "positioning": "Quản lý sản xuất với kinh nghiệm thực tế trong nhà máy, kết hợp năng lực triển khai MES và chuyển đổi số sản xuất.",
+    "positioning": "Quản lý sản xuất với kinh nghiệm thực tế tại nhà máy — tự xây dựng nền tảng MES, vận hành hạ tầng IT, và đang phát triển giải pháp tự động hoá thiết kế bằng AI + MCP + SketchUp.",
     "cta": {
       "experience": "Xem kinh nghiệm",
       "projects": "Dự án tiêu biểu",
@@ -72,7 +72,7 @@
     "sectionCode": "SEC 02",
     "sectionName": "Năng lực",
     "title": "Năng lực cốt lõi",
-    "lead": "Bốn nhóm năng lực tôi sử dụng hằng ngày để giữ nhà máy chạy đúng kế hoạch.",
+    "lead": "Sáu nhóm năng lực tôi dùng để giữ nhà máy chạy đúng kế hoạch và đưa công nghệ vào công việc thực tế.",
     "items": [
       {
         "no": "01",
@@ -136,6 +136,19 @@
           "Chuẩn hoá cách làm việc",
           "Kèm cặp tại chỗ"
         ]
+      },
+      {
+        "no": "06",
+        "name": "IT, AI & Tự động hoá",
+        "desc": "Vận hành hạ tầng IT của nhà máy, chuẩn hoá kiến trúc phần mềm và kiểm thử trước khi triển khai; đang phát triển giải pháp kết nối AI Agent với SketchUp qua MCP để giảm thao tác lặp lại.",
+        "tags": [
+          "AI Agent",
+          "MCP",
+          "SketchUp Ruby API",
+          "Audit mã nguồn",
+          "Kiểm thử chức năng",
+          "Hạ tầng LAN"
+        ]
       }
     ]
   },
@@ -158,6 +171,7 @@
           "Báo cáo trực tiếp cho Giám đốc Nhà máy (Plant Director) và làm việc cùng cán bộ quản lý của ba xưởng để bố trí công việc; xử lý vướng mắc và báo cáo khi vượt thẩm quyền.",
           "Thiết kế hệ thống quản lý kho bán thành phẩm với hơn 1.100 mã — một phần trong tổng số hơn 5.000 mã vật tư của nhà máy.",
           "Tự xây dựng và vận hành hệ thống quản lý nội bộ (MES, kho, tài liệu) phục vụ trực tiếp công tác quản lý sản xuất — từ khảo sát nghiệp vụ đến triển khai, không qua đội IT riêng.",
+          "Vận hành và xử lý sự cố máy tính, mạng LAN, máy in, camera và các hệ thống dùng chung của nhà máy.",
           "Theo dõi đơn hàng đến khi giao, lập báo cáo sản xuất cho Ban Giám đốc.",
           "Phối hợp trực tiếp với Kho, Nhân sự, Chất lượng và IT để giải quyết vấn đề liên bộ phận.",
           "Đào tạo công nhân mới vào và huấn luyện phương pháp quản lý cho cán bộ cấp trung của các xưởng."
@@ -171,50 +185,130 @@
     "sectionCode": "SEC 04",
     "sectionName": "Dự án",
     "title": "Dự án tiêu biểu",
-    "lead": "Các hệ thống đang được sử dụng thật tại nhà máy. Trình bày theo giá trị quản lý; bật Kỹ thuật nếu cần chi tiết triển khai.",
-    "view": {
-      "business": "Quản lý",
-      "technical": "Kỹ thuật",
-      "label": "Cách trình bày"
+    "lead": "Hệ thống đã chạy thật tại nhà máy và các dự án AI, tự động hoá đang phát triển. Mỗi dự án ghi rõ trạng thái — ý tưởng và kế hoạch không được trình bày như thành tích đã hoàn thành.",
+    "status": {
+      "completed": "Hoàn thành",
+      "inProgress": "Đang thực hiện",
+      "planned": "Kế hoạch"
+    },
+    "statusNote": {
+      "completed": "Đã triển khai và đang được sử dụng thực tế.",
+      "inProgress": "Đang phát triển hoặc nghiên cứu — kết quả chưa phải bản cuối.",
+      "planned": "Mới ở giai đoạn nghiên cứu, định hướng — chưa triển khai."
+    },
+    "filter": {
+      "label": "Lọc theo trạng thái",
+      "all": "Tất cả",
+      "showing": "Đang hiển thị {count} dự án"
     },
     "labels": {
-      "problem": "Vấn đề",
-      "solution": "Giải pháp",
-      "value": "Giá trị quản lý",
+      "goal": "Mục tiêu",
+      "highlights": {
+        "completed": "Đã thực hiện",
+        "inProgress": "Đang thực hiện",
+        "planned": "Phạm vi dự kiến"
+      },
+      "result": {
+        "completed": "Kết quả",
+        "inProgress": "Hiện trạng",
+        "planned": "Kết quả kỳ vọng"
+      },
+      "next": "Hướng tiếp theo",
       "scope": "Phạm vi",
-      "tech": "Công nghệ",
+      "tech": "Công nghệ · Phương pháp",
       "caseStudy": "Xem chi tiết",
-      "noImage": "Chưa có ảnh",
+      "noImage": "Chưa có ảnh thực tế",
+      "diagram": "Sơ đồ quy trình — ảnh thực tế sẽ bổ sung",
+      "featured": "Dự án nổi bật",
       "confidential": "Dữ liệu trong ảnh đã được che theo quy định bảo mật của công ty.",
       "role": "Vai trò"
     },
     "items": {
+      "sketchup-mcp": {
+        "title": "AI + MCP + SketchUp Automation",
+        "subtitle": "Tự động hoá thiết kế 3D: AI Agent điều khiển SketchUp qua MCP",
+        "goal": "Giảm thao tác thủ công khi dựng mô hình, tiết kiệm thời gian và chuẩn hoá quy trình thiết kế cho nhiều mẫu nhà khác nhau.",
+        "highlights": [
+          "Phát triển kiến trúc kết nối AI Agent → MCP Server → SketchUp Extension → SketchUp Ruby API.",
+          "Xây dựng bộ quy tắc thiết kế có thể tái sử dụng để hỗ trợ thiết kế nhiều mẫu nhà.",
+          "Tự động hoá các thao tác dựng mô hình, xử lý thông tin thiết kế và chụp góc nhìn 3D."
+        ],
+        "result": "Đang phát triển. Chưa có số liệu đo lường về thời gian tiết kiệm — sẽ cập nhật khi có kết quả kiểm chứng.",
+        "role": "Thiết kế kiến trúc tích hợp, xây dựng quy tắc thiết kế và phát triển phần kết nối."
+      },
       "mes": {
         "title": "Manufacturing MES Platform",
         "subtitle": "Nền tảng quản lý sản xuất nội bộ",
-        "problem": "Kế hoạch, tiến độ, tồn kho và tài liệu nằm rải rác ở nhiều file. Ban Giám đốc muốn biết một đơn hàng đang ở đâu thì phải chờ tổng hợp tay.",
-        "solution": "Xây dựng nền tảng MES chạy trong mạng nội bộ, quản lý toàn bộ luồng từ nhận đơn tới xuất hàng, kèm phân quyền và nhật ký thao tác. Trong đó tôi tự thiết kế module kho bán thành phẩm với hơn 1.100 mã.",
-        "value": "Ban Giám đốc xem được kế hoạch và tiến độ cả ba xưởng trên một màn hình (thay vì chờ báo cáo 1 ngày); kho bán thành phẩm tra được tồn, vị trí Real-time thay vì dò Excel.",
-        "message": "Công nghệ dùng để giải quyết vấn đề sản xuất.",
+        "goal": "Gom kế hoạch, tiến độ, tồn kho và tài liệu đang nằm rải rác ở nhiều file về một nền tảng, để Ban Giám đốc biết đơn hàng đang ở đâu mà không phải chờ tổng hợp tay.",
+        "highlights": [
+          "Nền tảng MES chạy trong mạng nội bộ, quản lý toàn bộ luồng từ nhận đơn tới xuất hàng.",
+          "Phân quyền người dùng và nhật ký thao tác cho từng chức năng.",
+          "Tự thiết kế module kho bán thành phẩm với hơn 1.100 mã."
+        ],
+        "result": "Ban Giám đốc xem được kế hoạch và tiến độ cả ba xưởng trên một màn hình (thay vì chờ báo cáo 1 ngày); kho bán thành phẩm tra được tồn, vị trí Real-time thay vì dò Excel.",
         "role": "Tự thực hiện toàn bộ — khảo sát nghiệp vụ, thiết kế, lập trình, triển khai và vận hành."
       },
       "digital": {
         "title": "Production Digitalization",
         "subtitle": "Số hoá dữ liệu sản xuất và chấm công",
-        "problem": "Số liệu sản lượng và chấm công xử lý bằng Excel thủ công, phụ thuộc vào một người và dễ sai lệch giữa các bộ phận.",
-        "solution": "Xây dựng luồng số hoá: nhận file Excel, xử lý theo cấu hình ca và ngoại lệ, xuất báo cáo và đẩy lên màn hình phân tích cho từng tổ.",
-        "value": "Việc đối chiếu và tổng hợp không còn phụ thuộc thao tác tay của một người; số liệu sản lượng theo tổ và theo công nhân xem được ngay.",
-        "message": "Dữ liệu sản xuất phải nhìn thấy được thì mới quản lý được.",
+        "goal": "Bỏ sự phụ thuộc vào thao tác Excel thủ công của một người và tránh sai lệch số liệu sản lượng, chấm công giữa các bộ phận.",
+        "highlights": [
+          "Nhận file Excel và xử lý theo cấu hình ca, ngoại lệ.",
+          "Đối chiếu chấm công và tổng hợp sản lượng theo tổ, theo công nhân.",
+          "Xuất báo cáo và đẩy lên màn hình phân tích cho từng tổ."
+        ],
+        "result": "Việc đối chiếu và tổng hợp không còn phụ thuộc thao tác tay của một người; số liệu sản lượng theo tổ và theo công nhân xem được ngay.",
         "role": "Tự thực hiện toàn bộ — từ quy tắc nghiệp vụ tới ứng dụng chạy trong LAN."
       },
       "itsys": {
-        "title": "Factory IT & Business Systems",
-        "subtitle": "Hạ tầng và hệ thống nghiệp vụ nhà máy",
-        "problem": "Hệ thống nội bộ cần máy chủ, mạng và quy trình xử lý sự cố ổn định; các tác vụ IT lặp lại mỗi ngày làm thủ công, mỗi lần một kiểu.",
-        "solution": "Quản trị máy chủ và mạng nội bộ cho toàn bộ hệ thống nghiệp vụ; chuẩn hoá các thao tác IT thường gặp thành bộ công cụ chạy nhanh, song ngữ Việt – Trung.",
-        "value": "Hệ thống dùng chung chạy ổn định; cùng một sự cố được xử lý cùng một cách, người mới tiếp nhận được ngay.",
-        "message": "Hạ tầng ổn định là điều kiện để số hoá đứng vững.",
-        "role": "Tự quản trị máy chủ, mạng nội bộ và bộ công cụ xử lý sự cố."
+        "title": "IT Infrastructure & Production Automation",
+        "subtitle": "Hạ tầng IT, hệ thống dùng chung và tự động hoá tác vụ nhà máy",
+        "goal": "Giữ máy chủ, mạng và các hệ thống dùng chung chạy ổn định; cùng một sự cố được xử lý cùng một cách thay vì mỗi lần một kiểu.",
+        "highlights": [
+          "Vận hành và xử lý sự cố máy tính, mạng LAN, máy in, camera và hệ thống dùng chung.",
+          "Quản trị máy chủ và mạng nội bộ cho các hệ thống nghiệp vụ; chuẩn hoá thao tác IT thường gặp thành bộ công cụ song ngữ Việt – Trung.",
+          "Kết hợp kiến thức IT với nghiệp vụ quản lý, dữ liệu và quy trình sản xuất."
+        ],
+        "result": "Hệ thống dùng chung chạy ổn định; cùng một sự cố được xử lý cùng một cách, người mới tiếp nhận được ngay.",
+        "next": "Ứng dụng AI và tự động hoá để nâng cao hiệu suất công việc.",
+        "role": "Tự quản trị máy chủ, mạng nội bộ, thiết bị dùng chung và bộ công cụ xử lý sự cố."
+      },
+      "software-qa": {
+        "title": "Software Architecture & Quality Assurance",
+        "subtitle": "Chuẩn hoá kiến trúc, audit mã nguồn và kiểm thử trước khi triển khai",
+        "goal": "Giữ các hệ thống tự phát triển dễ bảo trì, dễ mở rộng và tránh phát sinh lỗi khi sửa đổi hoặc bổ sung tính năng.",
+        "highlights": [
+          "Chuẩn hoá kiến trúc module, thuật ngữ và quy trình phát triển phần mềm.",
+          "Audit mã nguồn trước khi sửa đổi hoặc bổ sung tính năng.",
+          "Xây dựng các quy tắc có khả năng tái sử dụng và mở rộng.",
+          "Kiểm thử chức năng, đánh giá chất lượng và báo cáo kết quả triển khai."
+        ],
+        "result": "Đang áp dụng trong quá trình phát triển các dự án. Chưa có số liệu tổng hợp về chất lượng — sẽ bổ sung khi có.",
+        "role": "Xây dựng quy chuẩn, audit mã nguồn, kiểm thử và báo cáo."
+      },
+      "ai-architecture": {
+        "title": "AI-Assisted Architectural Design",
+        "subtitle": "Ứng dụng AI vào thiết kế nhà ở hiện đại — nhà cấp 4 mái Nhật",
+        "goal": "Rút ngắn thời gian từ phương án tới phối cảnh và video kiến trúc, với vật liệu, màu sắc, ánh sáng nhất quán giữa các phương án.",
+        "highlights": [
+          "Nghiên cứu ứng dụng AI vào thiết kế nhà ở hiện đại, đặc biệt là nhà cấp 4 mái Nhật.",
+          "Chuẩn hoá vật liệu, màu sắc, ánh sáng và yêu cầu phối cảnh nội thất, ngoại thất.",
+          "Xây dựng workflow hỗ trợ render, tạo video kiến trúc và quản lý góc nhìn 3D."
+        ],
+        "result": "Đang nghiên cứu và xây dựng workflow — kết quả sẽ cập nhật khi hoàn thiện.",
+        "role": "Nghiên cứu, chuẩn hoá yêu cầu thiết kế và xây dựng workflow."
+      },
+      "web-3d": {
+        "title": "Browser-Based 3D Model Sharing",
+        "subtitle": "Chia sẻ mô hình 3D qua đường link trình duyệt, không cần cài SketchUp",
+        "goal": "Người xem mở được mô hình 3D chỉ bằng một đường link — không cần cài SketchUp, chỉ có quyền xem, chi phí triển khai thấp.",
+        "highlights": [
+          "Nghiên cứu giải pháp chia sẻ mô hình 3D qua đường link trình duyệt.",
+          "Định hướng dùng định dạng GLB để xoay mô hình, quan sát không gian bên trong và xem vật liệu.",
+          "Ưu tiên trải nghiệm không cần cài SketchUp, quyền xem không chỉnh sửa và chi phí triển khai thấp."
+        ],
+        "result": "Chưa triển khai — đang ở giai đoạn nghiên cứu phương án. Kỳ vọng: gửi một đường link là xem được mô hình 3D, không cần cài phần mềm.",
+        "role": "Nghiên cứu và lựa chọn phương án."
       }
     }
   },
@@ -238,7 +332,19 @@
       },
       {
         "name": "Công nghệ & Số hoá",
-        "items": "MES · Quản trị hạ tầng LAN nội bộ · Triển khai hệ thống Web ứng dụng"
+        "items": "MES · Máy chủ Windows · Mạng LAN nội bộ · Máy in, camera · Triển khai hệ thống Web ứng dụng"
+      },
+      {
+        "name": "AI & Tự động hoá",
+        "items": "AI Agent · MCP Server · SketchUp Extension · SketchUp Ruby API · Tự động hoá thao tác lặp lại"
+      },
+      {
+        "name": "Kiến trúc phần mềm & QA",
+        "items": "Kiến trúc module · Audit mã nguồn · Quy tắc tái sử dụng · Kiểm thử chức năng · Báo cáo triển khai"
+      },
+      {
+        "name": "3D & Thiết kế",
+        "items": "SketchUp · GLB · Render và video kiến trúc có hỗ trợ AI (đang nghiên cứu)"
       }
     ],
     "education": {
@@ -257,7 +363,7 @@
     "sectionCode": "SEC 06",
     "sectionName": "Liên hệ",
     "title": "Sẵn sàng cho vị trí quản lý sản xuất tiếp theo.",
-    "lead": "Nếu nhà máy của anh/chị cần một người quản lý hiểu cả xưởng lẫn hệ thống, hãy liên hệ trực tiếp.",
+    "lead": "Nếu đơn vị của anh/chị cần một người hiểu cả xưởng, hệ thống và cách đưa AI, tự động hoá vào công việc thực tế, hãy liên hệ trực tiếp.",
     "targetLabel": "Vị trí hướng tới",
     "targets": [
       "Giám sát Sản xuất",
@@ -277,30 +383,12 @@
     "targetNote": "hoặc vị trí tương đương"
   },
   "caseStudy": {
-    "steps": [
-      "Bối cảnh",
-      "Vấn đề vận hành",
-      "Cách tiếp cận",
-      "Giải pháp",
-      "Công nghệ",
-      "Giá trị quản lý"
-    ],
-    "pending": "Phần này chưa có nội dung — sẽ bổ sung",
-    "pendingResult": "Chưa có số liệu đo được — sẽ bổ sung khi có",
     "back": "Về trang chủ",
     "allProjects": "Tất cả dự án",
     "screenshots": "Ảnh thực tế",
-    "core": "Phạm vi hệ thống",
+    "core": "Phạm vi",
     "next": "Dự án tiếp theo",
-    "value": "Giá trị quản lý",
-    "stepNames": [
-      "Bối cảnh",
-      "Vấn đề vận hành",
-      "Cách tiếp cận",
-      "Giải pháp",
-      "Công nghệ",
-      "Giá trị quản lý"
-    ]
+    "contents": "Nội dung"
   },
   "notFound": {
     "title": "Không tìm thấy trang",

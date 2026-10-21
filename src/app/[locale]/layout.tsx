@@ -85,6 +85,16 @@ export default async function LocaleLayout({
     telephone: profile.phone || undefined,
     jobTitle: t("title").split("—")[1]?.trim() || t("title"),
     worksFor: { "@type": "Organization", name: "WEBOX Việt Nam" },
+    knowsAbout: [
+      "Production Management",
+      "Manufacturing Execution System (MES)",
+      "Manufacturing Digital Transformation",
+      "IT Infrastructure",
+      "AI Agents",
+      "Model Context Protocol (MCP)",
+      "SketchUp Ruby API",
+      "Software Quality Assurance",
+    ],
     inLanguage: locale,
   };
 

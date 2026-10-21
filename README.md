@@ -116,13 +116,33 @@ Bảng màu Warm Industrial Minimal, khai báo ở `src/styles/globals.css`:
 | SEC 10 | Education        | Một dải mỏng                                                               |
 | SEC 11 | Contact          | Nền tối, email + điện thoại                                                |
 
-**Business View là mặc định.** Card dự án hiển thị Problem → Solution → **Business Value** (khối nền olive nhạt). Bấm `Technical` mới hiện Core modules và Technology — người tuyển dụng không phải đọc phần kỹ thuật nếu không muốn.
+## Dự án & trạng thái (bản 2026.10)
 
-## Trang case study
+Dữ liệu ở `src/content/projects.ts`, chữ hiển thị ở `messages/*.json → projects.items.<slug>`.
+Mỗi dự án có đúng một trong ba trạng thái:
 
-`/projects/[slug]` — 6 bước Context → Challenge → Approach → Solution → Technology → Result, có khối Business Value ở đầu trang, danh mục sticky và link sang dự án kế tiếp.
+| `status`     | VI             | EN          | ZH     | Nghĩa                                            |
+| ------------ | -------------- | ----------- | ------ | ------------------------------------------------ |
+| `completed`  | Hoàn thành     | Completed   | 已完成 | Đã triển khai, đang dùng thực tế                 |
+| `inProgress` | Đang thực hiện | In Progress | 进行中 | Đang phát triển / nghiên cứu, chưa phải bản cuối |
+| `planned`    | Kế hoạch       | Planned     | 规划中 | Mới nghiên cứu, định hướng — chưa triển khai     |
 
-Challenge / Approach / Result đang là ô kẻ chéo "sẽ bổ sung" — chưa có nội dung anh cung cấp nên không tự viết.
+Nhãn của khối kết quả đổi theo trạng thái (Kết quả / Hiện trạng / Kết quả kỳ vọng) để ý tưởng
+không bị đọc thành thành tích. Dự án `featured: true` (AI + MCP + SketchUp) đứng đầu, card rộng toàn hàng.
+Trang chủ có bộ lọc theo trạng thái thay cho công tắc Quản lý / Kỹ thuật cũ.
+
+Chưa có ảnh thực tế (`images: []`) thì card vẽ sơ đồ quy trình từ `flow` và ghi rõ
+"ảnh thực tế sẽ bổ sung" — không dùng ảnh minh hoạ giả. Thêm ảnh: đặt `.webp` vào
+`public/projects/` rồi khai báo trong `images`.
+
+Thêm dự án mới: thêm phần tử vào `projects` **và** mục `items.<slug>` ở cả 3 file ngôn ngữ.
+`npm test` sẽ báo lỗi nếu thiếu khoá, lệch số phần tử giữa các ngôn ngữ hoặc sai trạng thái.
+
+## Trang chi tiết dự án
+
+`/projects/[slug]` — Mục tiêu → Nội dung thực hiện → Công nghệ · Phương pháp → Kết quả, kèm nhãn
+trạng thái, ảnh thực tế (hoặc sơ đồ), JSON-LD `CreativeWork` có `creativeWorkStatus`. Trang được
+index và có trong `sitemap.xml`; slug không tồn tại trả 404.
 
 ## Hiệu ứng & bóng đổ
 
@@ -132,8 +152,6 @@ Bóng đổ 3 cấp ở `:root`: `--shadow-1` header/nút · `--shadow-2` card h
 
 ## Chỗ còn trống — hiển thị rõ, không bịa
 
-- Case study: Challenge · Approach · Result
-- Card 02 Warehouse: chưa có ảnh chụp màn hình
-- LinkedIn · GitHub: tự ẩn khi trống
-- File CV: nút hiện "sẽ bổ sung"
-- `profile.siteUrl`: còn là domain ví dụ
+- Ảnh thực tế cho 4 dự án: AI + MCP + SketchUp, Software Architecture & QA, AI-Assisted Architectural Design, Browser-Based 3D Model Sharing (đang hiện sơ đồ quy trình)
+- Số liệu đo được cho các dự án Đang thực hiện (ví dụ thời gian tiết kiệm khi dựng mô hình)
+- GitHub: tự ẩn khi trống

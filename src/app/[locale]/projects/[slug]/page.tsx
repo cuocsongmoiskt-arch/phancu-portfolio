@@ -7,9 +7,26 @@ import { routing } from "@/i18n/routing";
 import type { AppLocale } from "@/i18n/routing";
 import { profile, nameByLocale } from "@/content/profile";
 import { projects } from "@/content/projects";
+import type { ProjectStatus } from "@/content/projects";
 import Tag from "@/components/ui/Tag";
 import Reveal from "@/components/ui/Reveal";
+import StatusBadge from "@/components/ui/StatusBadge";
+import ProjectVisual from "@/components/sections/ProjectVisual";
 import CaseStudyNav from "@/components/sections/casestudy/CaseStudyNav";
+import type {
+  ProjectItem,
+  ProjectLabels,
+} from "@/components/sections/ProjectCard";
+
+/** schema.org creativeWorkStatus — giữ đúng nghĩa trạng thái cho máy tìm kiếm */
+const SCHEMA_STATUS: Record<ProjectStatus, string> = {
+  completed: "Published",
+  inProgress: "Incomplete",
+  planned: "Draft",
+};
+
+// Slug ngoài danh sách dự án trả 404 thật thay vì 200 kèm trang "không tìm thấy"
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -23,17 +40,35 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) return {};
   const t = await getTranslations({ locale, namespace: "projects" });
-  const item = t.raw(`items.${slug}`) as
-    { title: string; subtitle: string } | undefined;
-  if (!item) return {};
+  const item = t.raw(`items.${slug}`) as ProjectItem;
+  const title = `${item.title} — ${nameByLocale[locale as AppLocale]}`;
+  const description = `${t(`status.${project.status}`)} · ${item.subtitle}. ${item.goal}`;
+  const cover = project.images[0];
+
   return {
-    title: `${item.title} — ${nameByLocale[locale as AppLocale]}`,
-    description: item.subtitle,
-    alternates: { canonical: `/${locale}/projects/${slug}` },
-    // Trang này vẫn còn khối "sẽ bổ sung" (Challenge/Approach) và không còn link từ
-    // ProjectCard — chưa nên để Google index tới khi có nội dung đầy đủ.
-    robots: { index: false, follow: true },
+    title,
+    description,
+    alternates: {
+      canonical: `/${locale}/projects/${slug}`,
+      languages: Object.fromEntries(
+        routing.locales.map((l) => [l, `/${l}/projects/${slug}`]),
+      ),
+    },
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      locale,
+      url: `/${locale}/projects/${slug}`,
+      images: [
+        cover
+          ? { url: cover.src, width: cover.width, height: cover.height }
+          : { url: "/og.png", width: 1200, height: 630 },
+      ],
+    },
   };
 }
 
@@ -50,55 +85,63 @@ export default async function CaseStudyPage({
 
   const t = await getTranslations("projects");
   const c = await getTranslations("caseStudy");
-  const item = t.raw(`items.${slug}`) as {
-    title: string;
-    subtitle: string;
-    problem: string;
-    solution: string;
-    value: string;
-    message: string;
-  };
-  const steps = c.raw("steps") as string[];
-  const stepNames = c.raw("stepNames") as string[];
+  const item = t.raw(`items.${slug}`) as ProjectItem;
+  const labels = t.raw("labels") as ProjectLabels;
+  const status = project.status;
 
   const index = projects.findIndex((p) => p.slug === slug);
   const next = projects[(index + 1) % projects.length];
   const nextItem = t.raw(`items.${next.slug}`) as { title: string };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: c("back"),
-        item: `${profile.siteUrl}/${locale}`,
+  const url = `${profile.siteUrl}/${locale}/projects/${slug}`;
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: c("back"),
+          item: `${profile.siteUrl}/${locale}`,
+        },
+        { "@type": "ListItem", position: 2, name: item.title, item: url },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: item.title,
+      headline: item.title,
+      description: item.goal,
+      url,
+      inLanguage: locale,
+      creativeWorkStatus: SCHEMA_STATUS[status],
+      keywords: project.tech.join(", "),
+      author: {
+        "@type": "Person",
+        name: nameByLocale[locale as AppLocale],
+        url: profile.siteUrl,
       },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: item.title,
-        item: `${profile.siteUrl}/${locale}/projects/${slug}`,
-      },
-    ],
-  };
+      ...(project.images[0]
+        ? { image: `${profile.siteUrl}${project.images[0].src}` }
+        : {}),
+    },
+  ];
 
-  /** Nội dung của 6 bước. null = chưa có, hiển thị ô chờ bổ sung (không tự bịa). */
-  const blocks: { body: string | null; pending?: string }[] = [
-    { body: item.problem },
-    { body: null },
-    { body: null },
-    { body: item.solution },
-    { body: project.tech.join(" · ") },
-    { body: null, pending: c("pendingResult") },
+  /** Các bước đều lấy từ nội dung thật — không còn ô "sẽ bổ sung". */
+  const steps = [
+    labels.goal,
+    labels.highlights[status],
+    labels.tech,
+    labels.result[status],
   ];
 
   return (
     <article className="pt-28 md:pt-36">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Tiêu đề */}
       <header className="container-page">
@@ -110,45 +153,56 @@ export default async function CaseStudyPage({
             {c("back")}
           </Link>
           <span aria-hidden>/</span>
-          <span className="text-ink-900">{c("allProjects")}</span>
+          <Link
+            href="/#projects"
+            className="transition-colors hover:text-accent-600"
+          >
+            {c("allProjects")}
+          </Link>
         </nav>
 
-        <p className="display mt-8 text-[34px] text-accent-600 md:text-[44px]">
-          {project.no}
-        </p>
-        <h1 className="display t-display mt-1">{item.title}</h1>
-        <p className="t-lead mt-3 text-ink-500">{item.subtitle}</p>
-        <p className="t-lead mt-8 max-w-[52ch] border-l-2 border-highlight pl-5">
-          {item.message}
-        </p>
-
-        <div className="mt-8 max-w-[62ch] rounded-xl border border-line bg-accent-50 p-6">
-          <p className="label-mono text-accent-600">{c("value")}</p>
-          <p className="t-body mt-2 font-medium">{item.value}</p>
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <span className="display text-[34px] leading-none text-accent-600 md:text-[44px]">
+            {project.no}
+          </span>
+          <StatusBadge status={status} label={t(`status.${status}`)} />
         </div>
+        <h1 className="display t-display mt-4 max-w-[22ch]">{item.title}</h1>
+        <p className="t-lead mt-3 max-w-[60ch] text-ink-500">{item.subtitle}</p>
+        <p className="t-small mt-4 max-w-[60ch] text-ink-500">
+          {t(`statusNote.${status}`)}
+        </p>
       </header>
 
-      {/* Ảnh bìa */}
-      {project.images[0] && (
-        <div className="container-page mt-14">
-          <Reveal>
-            <div className="overflow-hidden rounded-xl border border-line shadow-card">
+      {/* Hình chính: ảnh thực tế hoặc sơ đồ quy trình */}
+      <div className="container-page mt-12">
+        <Reveal>
+          <div className="overflow-hidden rounded-2xl border border-line bg-bg-alt shadow-card">
+            {project.images[0] ? (
               <Image
                 src={project.images[0].src}
                 alt={item.title}
                 width={project.images[0].width}
                 height={project.images[0].height}
                 priority
+                sizes="(max-width: 1440px) 100vw, 1344px"
                 className="w-full"
               />
-            </div>
-          </Reveal>
-        </div>
-      )}
+            ) : (
+              <ProjectVisual
+                project={project}
+                alt={item.title}
+                caption={labels.diagram}
+                sizes="100vw"
+              />
+            )}
+          </div>
+        </Reveal>
+      </div>
 
-      {/* 6 bước */}
-      <div className="container-page mt-20 grid grid-cols-1 gap-12 pb-24 md:mt-28 md:grid-cols-12 md:gap-10 md:pb-32">
-        <CaseStudyNav steps={steps} names={stepNames} />
+      {/* Nội dung */}
+      <div className="container-page mt-16 grid grid-cols-1 gap-12 pb-24 md:mt-24 md:grid-cols-12 md:gap-10 md:pb-32">
+        <CaseStudyNav steps={steps} label={c("contents")} />
 
         <div className="space-y-14 md:col-span-8 md:col-start-5">
           {steps.map((step, i) => (
@@ -156,7 +210,7 @@ export default async function CaseStudyPage({
               key={step}
               id={`step-${i + 1}`}
               data-section-code={`STEP 0${i + 1}`}
-              data-section-name={stepNames[i]}
+              data-section-name={step}
               className="scroll-mt-32"
             >
               <Reveal>
@@ -167,21 +221,24 @@ export default async function CaseStudyPage({
                   <span className="h-px flex-1 bg-line" aria-hidden />
                 </div>
                 <h2 className="display t-h3 mt-4">{step}</h2>
-                {stepNames[i] !== step && (
-                  <p className="label-mono mt-1.5">{stepNames[i]}</p>
+
+                {i === 0 && (
+                  <p className="t-lead mt-5 max-w-[62ch]">{item.goal}</p>
                 )}
 
-                {blocks[i].body ? (
-                  <p className="t-lead mt-5 max-w-[62ch]">{blocks[i].body}</p>
-                ) : (
-                  <p className="hatch label-mono mt-5 rounded-xl border border-dashed border-line px-5 py-6 text-center">
-                    {blocks[i].pending ?? c("pending")}
-                  </p>
-                )}
-
-                {/* Chức năng chính đặt trong bước Solution */}
-                {i === 3 && (
+                {i === 1 && (
                   <>
+                    <ul className="mt-5 max-w-[62ch] space-y-3">
+                      {item.highlights.map((h) => (
+                        <li key={h} className="t-lead flex gap-3">
+                          <span
+                            className="mt-[0.75em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent-600"
+                            aria-hidden
+                          />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
                     <p className="label-mono mt-8">{c("core")}</p>
                     <ul className="mt-3 flex flex-wrap gap-2">
                       {project.scope.map((x) => (
@@ -190,6 +247,38 @@ export default async function CaseStudyPage({
                         </li>
                       ))}
                     </ul>
+                  </>
+                )}
+
+                {i === 2 && (
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {project.tech.map((x) => (
+                      <li key={x}>
+                        <Tag>{x}</Tag>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {i === 3 && (
+                  <>
+                    <div
+                      className={`result-box result-box--${status} mt-5 max-w-[62ch]`}
+                    >
+                      <p className="t-lead font-medium">{item.result}</p>
+                    </div>
+                    {item.next && (
+                      <>
+                        <p className="label-mono mt-8">{labels.next}</p>
+                        <p className="t-body mt-2 max-w-[62ch] text-ink-500">
+                          {item.next}
+                        </p>
+                      </>
+                    )}
+                    <p className="label-mono mt-8">{labels.role}</p>
+                    <p className="t-body mt-2 max-w-[62ch] font-medium">
+                      {item.role}
+                    </p>
                   </>
                 )}
               </Reveal>
@@ -203,19 +292,23 @@ export default async function CaseStudyPage({
               <div className="mt-4 space-y-5">
                 {project.images.slice(1).map((img, i) => (
                   <Reveal key={img.src}>
-                    <div className="overflow-hidden rounded-xl border border-line">
+                    <div className="overflow-hidden rounded-2xl border border-line">
                       <Image
                         src={img.src}
                         alt={`${item.title} — ${c("screenshots")} ${i + 2}`}
                         width={img.width}
                         height={img.height}
                         loading="lazy"
+                        sizes="(max-width: 768px) 100vw, 880px"
                         className="w-full"
                       />
                     </div>
                   </Reveal>
                 ))}
               </div>
+              <p className="label-mono mt-4 text-ink-500">
+                {labels.confidential}
+              </p>
             </section>
           )}
         </div>

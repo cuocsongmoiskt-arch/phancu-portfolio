@@ -1,114 +1,167 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Tag from "@/components/ui/Tag";
 import GlowCard from "@/components/ui/GlowCard";
-import type { Project } from "@/content/projects";
+import StatusBadge from "@/components/ui/StatusBadge";
+import ProjectVisual from "@/components/sections/ProjectVisual";
+import type { Project, ProjectStatus } from "@/content/projects";
 
-export default function ProjectCard({
-  project,
-  mode = "business",
-}: {
-  project: Project;
-  mode?: "business" | "technical";
-}) {
+export type ProjectItem = {
+  title: string;
+  subtitle: string;
+  goal: string;
+  highlights: string[];
+  result: string;
+  next?: string;
+  role: string;
+};
+
+export type ProjectLabels = {
+  goal: string;
+  highlights: Record<ProjectStatus, string>;
+  result: Record<ProjectStatus, string>;
+  next: string;
+  scope: string;
+  tech: string;
+  caseStudy: string;
+  noImage: string;
+  diagram: string;
+  featured: string;
+  confidential: string;
+  role: string;
+};
+
+export default function ProjectCard({ project }: { project: Project }) {
   const t = useTranslations("projects");
-  const item = t.raw(`items.${project.slug}`) as {
-    title: string;
-    subtitle: string;
-    problem: string;
-    solution: string;
-    value: string;
-    role: string;
-    message: string;
-  };
-  const labels = t.raw("labels") as Record<string, string>;
-  const lead = project.size === "lead";
-  const cover = project.images[0];
+  const item = t.raw(`items.${project.slug}`) as ProjectItem;
+  const labels = t.raw("labels") as ProjectLabels;
+  const featured = Boolean(project.featured);
 
   return (
-    <GlowCard className="card-lift group flex h-full flex-col rounded-xl border border-line bg-surface hover:border-ink-900">
+    <GlowCard
+      className={`card-lift group flex h-full flex-col rounded-2xl border bg-surface hover:border-ink-900 ${
+        featured ? "border-ink-900/15 shadow-card" : "border-line"
+      }`}
+    >
       <span className="ghost-no" aria-hidden>
         {project.no}
       </span>
-      <div className={lead ? "grid grid-cols-1 md:grid-cols-2" : ""}>
-        {/* ảnh */}
-        <div className="media-reveal zoom-wrap relative order-last aspect-[16/9] w-full border-b border-line bg-bg-alt md:order-none md:border-b-0">
-          {cover ? (
-            <Image
-              src={cover.src}
-              alt={item.title}
-              fill
-              loading="lazy"
-              sizes={
-                lead
-                  ? "(max-width: 768px) 100vw, 620px"
-                  : "(max-width: 768px) 100vw, 520px"
-              }
-              className="zoom-img object-cover object-left-top"
-            />
-          ) : (
-            <div className="hatch flex h-full items-center justify-center">
-              <span className="label-mono rounded-lg border border-line bg-surface px-3 py-2">
-                {labels.noImage}
-              </span>
-            </div>
-          )}
+      <div
+        className={`flex h-full flex-col ${featured ? "md:grid md:grid-cols-2" : ""}`}
+      >
+        {/* hình: ảnh thực tế hoặc sơ đồ quy trình */}
+        <div
+          className={`border-b border-line bg-bg-alt ${
+            featured ? "md:order-last md:border-b-0 md:border-l" : ""
+          }`}
+        >
+          <ProjectVisual
+            project={project}
+            alt={item.title}
+            caption={labels.diagram}
+            sizes={
+              featured
+                ? "(max-width: 768px) 100vw, 620px"
+                : "(max-width: 768px) 100vw, 560px"
+            }
+          />
         </div>
 
         {/* nội dung */}
-        <div className={`p-6 md:p-8 ${lead ? "md:p-10" : ""}`}>
-          <span
-            className={`display block text-accent-600 ${lead ? "text-[34px]" : "text-[26px]"}`}
-          >
-            {project.no}
-          </span>
-
-          <h3 className="display t-h3 mt-3">{item.title}</h3>
-          <p className="t-small mt-1.5 text-ink-500">{item.subtitle}</p>
-
-          <dl className="mt-7 space-y-4">
-            <div>
-              <dt className="label-mono">{labels.problem}</dt>
-              <dd className="t-small mt-1.5">{item.problem}</dd>
-            </div>
-            <div>
-              <dt className="label-mono">{labels.solution}</dt>
-              <dd className="t-small mt-1.5">{item.solution}</dd>
-            </div>
-            <div className="rounded-lg bg-accent-50 p-4">
-              <dt className="label-mono text-accent-600">{labels.value}</dt>
-              <dd className="t-small mt-1.5 font-medium">{item.value}</dd>
-            </div>
-          </dl>
-
-          {mode === "technical" && (
-            <div className="mt-7">
-              <p className="label-mono">{labels.scope}</p>
-              <ul className="mt-3 flex flex-wrap gap-2">
-                {project.scope.map((c) => (
-                  <li key={c}>
-                    <Tag>{c}</Tag>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <div className="mt-7 border-t border-line pt-5">
-            <p className="label-mono text-accent-600">{labels.role}</p>
-            <p className="t-small mt-1.5 font-medium">{item.role}</p>
+        <div
+          className={`relative z-[1] flex flex-1 flex-col p-6 md:p-8 ${featured ? "md:p-10" : ""}`}
+        >
+          <div className="flex flex-wrap items-center gap-2.5">
+            <span className="display text-[22px] leading-none text-accent-600">
+              {project.no}
+            </span>
+            <StatusBadge
+              status={project.status}
+              label={t(`status.${project.status}`)}
+            />
+            {featured && (
+              <span className="label-mono rounded-full bg-ink-900 px-3 py-1 text-white">
+                {labels.featured}
+              </span>
+            )}
           </div>
 
-          <p className="t-small mt-5 italic text-ink-500">{item.message}</p>
+          <h3
+            className={`display mt-5 ${featured ? "t-h2" : "t-h3"} max-w-[24ch]`}
+          >
+            {item.title}
+          </h3>
+          <p className="t-small mt-2 text-ink-500">{item.subtitle}</p>
 
-          {mode === "technical" && (
-            <p className="label-mono mt-5 text-ink-500">
-              {labels.tech} — {project.tech.join(" · ")}
-            </p>
-          )}
+          <dl className="mt-7 space-y-5">
+            <div>
+              <dt className="label-mono">{labels.goal}</dt>
+              <dd className="t-small mt-1.5">{item.goal}</dd>
+            </div>
+            <div>
+              <dt className="label-mono">
+                {labels.highlights[project.status]}
+              </dt>
+              <dd>
+                <ul className="mt-2 space-y-1.5">
+                  {item.highlights.map((h) => (
+                    <li key={h} className="t-small flex gap-2.5">
+                      <span
+                        className="mt-[0.7em] h-1 w-1 shrink-0 rounded-full bg-accent-600"
+                        aria-hidden
+                      />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+            <div className={`result-box result-box--${project.status}`}>
+              <dt className="label-mono">{labels.result[project.status]}</dt>
+              <dd className="t-small mt-1.5 font-medium text-ink-900">
+                {item.result}
+              </dd>
+            </div>
+            {item.next && (
+              <div>
+                <dt className="label-mono">{labels.next}</dt>
+                <dd className="t-small mt-1.5 text-ink-500">{item.next}</dd>
+              </div>
+            )}
+          </dl>
 
-          {/* Nút case study tạm ẩn cho tới khi có nội dung Khó khăn / Cách tiếp cận / Giá trị */}
+          <div className="mt-7">
+            <p className="label-mono">{labels.tech}</p>
+            <ul className="mt-2.5 flex flex-wrap gap-2">
+              {project.tech.map((x) => (
+                <li key={x}>
+                  <Tag>{x}</Tag>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-auto pt-7">
+            <div className="flex flex-wrap items-end justify-between gap-4 border-t border-line pt-5">
+              <div className="min-w-0 flex-1">
+                <p className="label-mono">{labels.role}</p>
+                <p className="t-small mt-1.5 font-medium">{item.role}</p>
+              </div>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="group/link inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[14px] font-medium transition-colors hover:border-ink-900 hover:bg-ink-900 hover:text-white"
+                aria-label={`${labels.caseStudy}: ${item.title}`}
+              >
+                {labels.caseStudy}
+                <span
+                  className="transition-transform group-hover/link:translate-x-0.5"
+                  aria-hidden
+                >
+                  →
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </GlowCard>
