@@ -248,8 +248,8 @@ def story(lang, photo_path):
     out += [Heading(d['h_skills'], B), two_col(d['skills'], S, label_w, width)]
     out += [Heading(d['h_lang'], B), two_col(d['langs'], S, label_w, width)]
     out += [Heading(d['h_edu'], B),
-            Paragraph('<font name="%s" color="#1E2A33">%s</font>%s%s'
-                      % (M, esc(d['edu'][0]), dot, esc(d['edu'][1])), S['body'])]
+            Paragraph('<font name="%s" color="#1E2A33">%s</font>%s%s%s%s'
+                      % (M, esc(d['edu'][0]), dot, esc(d['edu'][1]), dot, esc(d['edu'][2])), S['body'])]
     out += [Heading(d['h_other'], B), Paragraph(esc(d['other']), S['body'])]
     return out
 
