@@ -20,7 +20,7 @@ DATA = {
         "name": "PHAN ĐÌNH CỰ",
         "title": "Chủ quản / Giám sát Sản xuất · Phó Quản lý Sản xuất",
         "location": "Làm việc mọi khu vực",
-        "facts": [("2,5 năm", "quản lý sản xuất"), ("~1.500", "tủ / tháng"), ("3 xưởng", "~250 nhân sự"), ("HSK 4+", "tiếng Trung")],
+        "facts": [("2,5 năm", "quản lý sản xuất"), ("~1.500", "tủ / tháng"), ("3 xưởng", "~180 công nhân"), ("HSK 4+", "tiếng Trung")],
         "h_summary": "TÓM TẮT",
         "summary": "Phụ trách kế hoạch và tiến độ sản xuất tại nhà máy tủ khoá thông minh có Ban Giám đốc người Trung Quốc "
                    "(3 xưởng Kim loại – Sơn – Lắp ráp), báo cáo trực tiếp Giám đốc Nhà máy. Trước đó 4,5 năm tự điều hành kinh doanh "
@@ -36,7 +36,7 @@ DATA = {
                     ("Kế hoạch & tiến độ", [
                         "Phụ trách kế hoạch sản xuất theo đơn hàng và tiến độ 4 công đoạn Kim loại → Sơn → Lắp ráp → Xuất hàng: "
                         "~10 đơn hàng, ~1.500 tủ thông minh mỗi tháng, cùng các đơn gia công linh kiện.",
-                        "Phân bổ công việc hằng ngày cho 3 xưởng qua cán bộ quản lý xưởng; xử lý vướng mắc, báo cáo khi vượt thẩm quyền.",
+                        "Phân bổ công việc hằng ngày cho 3 xưởng (~180 công nhân) qua cán bộ quản lý xưởng; xử lý vướng mắc tại chỗ, báo cáo Giám đốc Nhà máy khi vượt thẩm quyền.",
                         "Bám đơn hàng tới khi giao; lập báo cáo sản xuất cho Giám đốc Nhà máy và Ban Giám đốc.",
                     ]),
                     ("Quy trình & con người", [
@@ -82,7 +82,7 @@ DATA = {
         "name": "潘廷巨  PHAN DINH CU",
         "title": "生产主管 · 生产副经理",
         "location": "工作地点不限",
-        "facts": [("2.5 年", "生产管理"), ("~1,500", "台 / 月"), ("3 个车间", "约 250 人"), ("HSK 4+", "中文")],
+        "facts": [("2.5 年", "生产管理"), ("~1,500", "台 / 月"), ("3 个车间", "约 180 名工人"), ("HSK 4+", "中文")],
         "h_summary": "个人简介",
         "summary": "在中方管理的智能柜工厂负责生产计划与进度（钣金、喷涂、装配三个车间），直接向厂长汇报。此前 4.5 年自主经营"
                    "电脑及笔记本业务。日常用中文与中方管理层沟通；自主搭建 MES，以实时数据管理生产。",
@@ -96,7 +96,7 @@ DATA = {
                 "groups": [
                     ("计划与进度", [
                         "负责按订单编制生产计划，管控钣金 → 喷涂 → 装配 → 出货四道工序进度：每月约 10 张订单、约 1,500 台智能柜，同时兼顾零部件代工订单。",
-                        "通过车间干部向三个车间分配每日工作；现场处理问题，超出权限时及时上报。",
+                        "通过车间干部向三个车间（约 180 名工人）分配每日工作；现场处理问题，超出权限时及时上报。",
                         "跟踪订单直至交付；向厂长及管理层提交生产报表。",
                     ]),
                     ("流程与团队", [
@@ -143,7 +143,7 @@ DATA = {
         "name": "PHAN DINH CU",
         "title": "Production Supervisor · Deputy Production Manager",
         "location": "Open to relocation",
-        "facts": [("2.5 yrs", "in production"), ("~1,500", "units / month"), ("3 workshops", "~250 staff"), ("HSK 4+", "Chinese")],
+        "facts": [("2.5 yrs", "in production"), ("~1,500", "units / month"), ("3 workshops", "~180 operators"), ("HSK 4+", "Chinese")],
         "h_summary": "SUMMARY",
         "summary": "Owns production planning and progress at a Chinese-managed smart-locker plant (metal, paint and assembly "
                    "workshops), reporting directly to the Factory Manager. Previously ran my own computer and laptop business for "
@@ -159,7 +159,7 @@ DATA = {
                     ("Planning & progress", [
                         "Own order-based production planning and progress across metal → paint → assembly → shipping: ~10 orders "
                         "and ~1,500 smart lockers a month, plus OEM component orders.",
-                        "Allocate daily work to three workshops through their supervisors; resolve issues on the spot, escalate when needed.",
+                        "Allocate daily work to three workshops (~180 operators) through their supervisors; resolve issues on the spot and escalate to the Factory Manager when needed.",
                         "Follow orders through to delivery; report production status to the Factory Manager and management.",
                     ]),
                     ("Process & people", [
